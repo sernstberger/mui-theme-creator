@@ -1,17 +1,39 @@
-import { createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+import { createTheme } from "@mui/material/styles";
+import { red } from "@mui/material/colors";
+import { alpha } from "@mui/material";
 
-// A custom theme for this app
-const theme = createTheme({
+const purple = "#7F56D9";
+
+let theme = createTheme({
   palette: {
     primary: {
-      main: '#556cd6',
+      main: purple,
     },
     secondary: {
-      main: '#19857b',
+      main: "#19857b",
     },
     error: {
       main: red.A400,
+    },
+  },
+});
+
+theme = createTheme(theme, {
+  palette: {
+    text: {
+      // primary: palette.palette.primary.main,
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          // backgroundColor: palette.palette.primary.main,
+          "&.Mui-focusVisible": {
+            boxShadow: `0 0 0 4px ${alpha(theme.palette.primary.main, 0.2)}`,
+          },
+        },
+      },
     },
   },
 });
