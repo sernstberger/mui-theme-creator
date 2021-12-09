@@ -23,7 +23,7 @@ const Palette = () => {
   return (
     <div>
       <Typography variant="h4">Palette</Typography>
-      <Stack direction="row" spacing={2}>
+      <Stack spacing={2}>
         <Color field="primaryColor" label="Primary color" />
         <Color field="secondaryColor" label="Secondary color" />
         <Color field="errorColor" label="Error color" />
