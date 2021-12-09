@@ -5,17 +5,14 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { DistributiveOmit, OverridableStringUnion } from "@mui/types";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import theme from "../../theme";
 
 import {
   Button as MuiButton,
   ButtonPropsVariantOverrides,
-  Divider,
   Stack,
   Typography,
 } from "@mui/material";
+import Layout from "../Layout";
 
 const Button = () => {
   const [variant, setVariant] =
@@ -26,15 +23,13 @@ const Button = () => {
       >
     >("contained");
 
-  const codeString = `${theme}`;
   const handleChange = (event: SelectChangeEvent) => {
     console.log(event.target.value);
     const foo: any = event.target.value;
     setVariant(foo);
   };
   return (
-    <div>
-      <Typography variant="h4">Button</Typography>
+    <Layout title="Button">
       <Stack spacing={2} direction="row">
         <MuiButton variant={variant}>Button CTA</MuiButton>
         <MuiButton variant={variant} className="Mui-hover">
@@ -85,9 +80,7 @@ const Button = () => {
           </Select>
         </FormControl>
       </Box>
-
-      <Divider />
-    </div>
+    </Layout>
   );
 };
 
