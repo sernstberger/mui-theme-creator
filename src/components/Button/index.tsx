@@ -12,6 +12,7 @@ import theme from "../../theme";
 import {
   Button as MuiButton,
   ButtonPropsVariantOverrides,
+  Divider,
   Stack,
   Typography,
 } from "@mui/material";
@@ -33,6 +34,7 @@ const Button = () => {
   };
   return (
     <div>
+      <Typography variant="h4">Button</Typography>
       <Stack spacing={2} direction="row">
         <MuiButton variant={variant}>Button CTA</MuiButton>
         <MuiButton variant={variant} className="Mui-hover">
@@ -42,6 +44,25 @@ const Button = () => {
           Button CTA
         </MuiButton>
         <MuiButton variant={variant} disabled>
+          Button CTA
+        </MuiButton>
+      </Stack>
+
+      <Stack spacing={2} direction="row">
+        <MuiButton color="secondary" variant={variant}>
+          Button CTA
+        </MuiButton>
+        <MuiButton color="secondary" variant={variant} className="Mui-hover">
+          Button CTA
+        </MuiButton>
+        <MuiButton
+          color="secondary"
+          variant={variant}
+          className="Mui-focusVisible"
+        >
+          Button CTA
+        </MuiButton>
+        <MuiButton color="secondary" variant={variant} disabled>
           Button CTA
         </MuiButton>
       </Stack>
@@ -65,13 +86,7 @@ const Button = () => {
         </FormControl>
       </Box>
 
-      <SyntaxHighlighter language="typescript" style={dark} wrapLines={true}>
-        {JSON.stringify(theme)}
-
-        {/* {`${theme}`} */}
-      </SyntaxHighlighter>
-
-      {JSON.stringify(theme)}
+      <Divider />
     </div>
   );
 };
