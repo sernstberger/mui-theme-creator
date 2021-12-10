@@ -6,6 +6,7 @@ import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import theme from "./theme";
 import Palette from "./components/Palette";
 import Shape from "./components/Shape";
+import Typography from "./components/Typography";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
           <Palette />
           <Button />
           <Shape />
-          Typography cool
+          <Typography />
         </Box>
       </Grid>
       <Grid item xs={3}>

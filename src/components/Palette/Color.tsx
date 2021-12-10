@@ -12,7 +12,6 @@ const Color = ({ field, label }: any) => {
   return (
     <Stack direction="row" spacing={2}>
       <Box style={{ backgroundColor: values[field] }} height={50} width={50} />
-
       <TextInput {...{ field, label }} />
       {/* <Box style={{ backgroundColor: values[field] }} height={50} width={50} />
       <Box style={{ backgroundColor: values[field] }} height={50} width={50} />

@@ -3,6 +3,7 @@ import { Stack, TextField } from "@mui/material";
 
 const TextInput = ({ field, label, type = "text" }: any) => {
   const { values, handleChange, touched, errors } = useFormikContext<any>();
+  console.log(field, values[field]);
   return (
     <TextField
       {...{ label, type }}
