@@ -1,3 +1,4 @@
+import { Stack } from "@mui/material";
 import TextInput from "../Form/TextInput";
 import Layout from "../Layout";
 import TypographyItem from "../TypographyItem";
@@ -5,9 +6,11 @@ import TypographyItem from "../TypographyItem";
 const Typography = () => {
   return (
     <Layout title="Typography">
-      <TextInput field="htmlFontSize" type="number" label="HTML font size" />
-      <TextInput field="fontFamily" label="Font family" />
-
+      <Stack spacing={2}>
+        <TextInput field="htmlFontSize" type="number" label="HTML font size" />
+        <TextInput field="fontFamily" label="Font family" />
+      </Stack>
+      <br />
       <TypographyItem variant="h1" />
       <TypographyItem variant="h2" />
       <TypographyItem variant="h3" />

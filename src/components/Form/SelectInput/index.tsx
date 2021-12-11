@@ -29,10 +29,11 @@ const SelectInput = ({
       <Select
         labelId={`${field}-label`}
         id={field}
-        onChange={handleChange}
         name={field}
         value={getIn(values, field)}
+        label={label}
         size="small"
+        onChange={handleChange}
         // error={touched[field] && Boolean(errors[field])}
         // helperText={touched[field] && errors[field]}
       >
