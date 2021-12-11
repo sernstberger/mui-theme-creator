@@ -25,6 +25,7 @@ interface Values {
   errorColor: string;
   warningColor: string;
   successColor: string;
+  textPrimaryColor: string;
   borderRadius: number;
   htmlFontSize: number;
   fontFamily: string;
@@ -105,6 +106,7 @@ ReactDOM.render(
       errorColor: "#EB0014",
       warningColor: "#F1A204",
       successColor: "#1DB45A",
+      textPrimaryColor: '#111111',
       borderRadius: 4,
       htmlFontSize: 16,
       fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
@@ -213,6 +215,9 @@ ReactDOM.render(
           },
           success: {
             main: values.successColor,
+          },
+          text: {
+            primary: values.textPrimaryColor,
           },
         },
         typography: {

@@ -32,7 +32,7 @@ const SelectInput = ({
         onChange={handleChange}
         name={field}
         value={getIn(values, field)}
-
+        size="small"
         // error={touched[field] && Boolean(errors[field])}
         // helperText={touched[field] && errors[field]}
       >

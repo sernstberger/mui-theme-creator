@@ -11,7 +11,7 @@ import { FontSize, FontWeight, TextTransform } from "../CssProperties";
 const TypographyItem = ({ variant }: any) => {
   return (
     <Box>
-      <MuiTypography {...{ variant }}>{variant}</MuiTypography>
+      <MuiTypography variant="subtitle2" gutterBottom>{variant}</MuiTypography>
       <Stack spacing={2}>
         <FontSize field={`${variant}FontSize`} />
         <FontWeight field={`${variant}FontWeight`} />

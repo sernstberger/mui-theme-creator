@@ -4,6 +4,12 @@ import { alpha } from "@mui/material";
 
 const purple = "#7F56D9";
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#FF9999',
+    },
+  },
+});
 
 export default theme;

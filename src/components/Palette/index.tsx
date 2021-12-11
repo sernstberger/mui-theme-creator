@@ -11,6 +11,7 @@ const Palette = () => {
         <Color field="errorColor" label="Error color" />
         <Color field="warningColor" label="Warning color" />
         <Color field="successColor" label="Success color" />
+        <Color field="textPrimaryColor" label="Text primary color" />
       </Stack>
     </Layout>
   );
