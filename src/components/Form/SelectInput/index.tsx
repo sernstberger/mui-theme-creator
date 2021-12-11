@@ -3,7 +3,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { useFormikContext } from "formik";
+import { getIn, useFormikContext } from "formik";
 
 interface OptionProps {
   value: string | number;
@@ -12,7 +12,7 @@ interface OptionProps {
 interface SelectInputProps {
   field: string;
   label: string;
-  options: string[] | OptionProps[];
+  options: string[] | number[] | OptionProps[];
 }
 
 const SelectInput = ({
@@ -31,13 +31,13 @@ const SelectInput = ({
         id={field}
         onChange={handleChange}
         name={field}
-        value={values[field]}
+        value={getIn(values, field)}
 
         // error={touched[field] && Boolean(errors[field])}
         // helperText={touched[field] && errors[field]}
       >
-        {options.map((option: string | OptionProps) => {
-          if (typeof option === "string") {
+        {options.map((option: string | number | OptionProps) => {
+          if (typeof option === "string" || typeof option === "number") {
             return <MenuItem value={option}>{option}</MenuItem>;
           }
           return <MenuItem value={option.value}>{option.label}</MenuItem>;

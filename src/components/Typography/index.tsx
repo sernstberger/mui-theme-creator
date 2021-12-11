@@ -7,7 +7,7 @@ const Typography = () => {
     <Layout title="Typography">
       <TextInput field="htmlFontSize" type="number" label="HTML font size" />
       <TextInput field="fontFamily" label="Font family" />
-      
+
       <TypographyItem variant="h1" />
       <TypographyItem variant="h2" />
       <TypographyItem variant="h3" />
@@ -21,8 +21,6 @@ const Typography = () => {
       <TypographyItem variant="caption" />
       <TypographyItem variant="button" />
       <TypographyItem variant="overline" />
-
-      
     </Layout>
   );
 };
