@@ -18,7 +18,7 @@ const Accordion = styled((props: AccordionProps) => (
   },
 }));
 
-const Layout = ({ title, children }: any) => {
+const SidebarItem = ({ title, children }: any) => {
   return (
     <Accordion>
       <AccordionSummary
@@ -33,4 +33,4 @@ const Layout = ({ title, children }: any) => {
   );
 };
 
-export default Layout;
+export default SidebarItem;

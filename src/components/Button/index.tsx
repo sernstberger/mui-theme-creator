@@ -12,7 +12,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import Layout from "../Layout";
+import SidebarItem from "../../Sidebar/SidebarItem";
 
 const Button = () => {
   const [variant, setVariant] =
@@ -29,39 +29,7 @@ const Button = () => {
     setVariant(foo);
   };
   return (
-    <Layout title="Button">
-      <Stack spacing={2} direction="row">
-        <MuiButton variant={variant}>Button CTA</MuiButton>
-        <MuiButton variant={variant} className="Mui-hover">
-          Button CTA
-        </MuiButton>
-        <MuiButton variant={variant} className="Mui-focusVisible">
-          Button CTA
-        </MuiButton>
-        <MuiButton variant={variant} disabled>
-          Button CTA
-        </MuiButton>
-      </Stack>
-
-      <Stack spacing={2} direction="row">
-        <MuiButton color="secondary" variant={variant}>
-          Button CTA
-        </MuiButton>
-        <MuiButton color="secondary" variant={variant} className="Mui-hover">
-          Button CTA
-        </MuiButton>
-        <MuiButton
-          color="secondary"
-          variant={variant}
-          className="Mui-focusVisible"
-        >
-          Button CTA
-        </MuiButton>
-        <MuiButton color="secondary" variant={variant} disabled>
-          Button CTA
-        </MuiButton>
-      </Stack>
-
+    <SidebarItem title="Button">
       <Typography>Defaults</Typography>
 
       <Box sx={{ minWidth: 120 }}>
@@ -80,7 +48,7 @@ const Button = () => {
           </Select>
         </FormControl>
       </Box>
-    </Layout>
+    </SidebarItem>
   );
 };
 

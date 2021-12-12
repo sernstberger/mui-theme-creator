@@ -1,5 +1,5 @@
 import TextInput from "../Form/TextInput";
-import Layout from "../Layout";
+import Layout from "../../Sidebar/SidebarItem";
 
 const Shape = () => {
   return (

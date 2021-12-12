@@ -1,7 +1,7 @@
 import TextInput from "../Form/TextInput";
 import { Stack, Typography as MuiTypography } from "@mui/material";
 import { FontSize, FontWeight, TextTransform } from "../CssProperties";
-import Layout from "../Layout";
+import Layout from "../../Sidebar/SidebarItem";
 
 const TypographyItem = ({ variant }: any) => {
   return (

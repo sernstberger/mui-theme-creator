@@ -1,29 +1,19 @@
-import Box from "@mui/material/Box";
-import Button from "./components/Button";
 import {
   Grid,
-  ThemeProvider,
   Typography as MuiTypography,
+  Button as MuiButton,
+  Stack,
 } from "@mui/material";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import theme from "./theme";
-import Palette from "./components/Palette";
-import Shape from "./components/Shape";
-import Typography from "./components/Typography";
+import Sidebar from "./Sidebar";
 
-export default function App() {
+const App = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={3}>
-        <ThemeProvider theme={theme}>
-          <Box>
-            <Palette />
-            <Button />
-            <Shape />
-            <Typography />
-          </Box>
-        </ThemeProvider>
+        <Sidebar />
       </Grid>
       <Grid item xs={6}>
         <MuiTypography variant="h1">Content goes here</MuiTypography>
@@ -39,6 +29,42 @@ export default function App() {
         <MuiTypography variant="caption">Content goes here</MuiTypography>
         <MuiTypography variant="button">Content goes here</MuiTypography>
         <MuiTypography variant="overline">Content goes here</MuiTypography>
+
+        <Stack spacing={2} direction="row">
+          <MuiButton variant="contained">Button CTA</MuiButton>
+          <MuiButton variant="contained" className="Mui-hover">
+            Button CTA
+          </MuiButton>
+          <MuiButton variant="contained" className="Mui-focusVisible">
+            Button CTA
+          </MuiButton>
+          <MuiButton variant="contained" disabled>
+            Button CTA
+          </MuiButton>
+        </Stack>
+
+        <Stack spacing={2} direction="row">
+          <MuiButton color="secondary" variant="contained">
+            Button CTA
+          </MuiButton>
+          <MuiButton
+            color="secondary"
+            variant="contained"
+            className="Mui-hover"
+          >
+            Button CTA
+          </MuiButton>
+          <MuiButton
+            color="secondary"
+            variant="contained"
+            className="Mui-focusVisible"
+          >
+            Button CTA
+          </MuiButton>
+          <MuiButton color="secondary" variant="contained" disabled>
+            Button CTA
+          </MuiButton>
+        </Stack>
       </Grid>
       <Grid item xs={3}>
         <SyntaxHighlighter language="typescript" style={dark} wrapLines={true}>
@@ -51,4 +77,6 @@ export default function App() {
       </Grid>
     </Grid>
   );
-}
+};
+
+export default App;

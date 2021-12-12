@@ -1,6 +1,6 @@
 import { Divider, Stack } from "@mui/material";
 import Color from "./Color";
-import Layout from "../Layout";
+import Layout from "../../Sidebar/SidebarItem";
 
 const Palette = () => {
   return (

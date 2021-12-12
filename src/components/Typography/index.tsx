@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import TextInput from "../Form/TextInput";
-import Layout from "../Layout";
+import Layout from "../../Sidebar/SidebarItem";
 import TypographyItem from "../TypographyItem";
 
 const Typography = () => {
