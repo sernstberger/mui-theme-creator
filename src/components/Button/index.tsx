@@ -13,6 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import SidebarItem from "../../Sidebar/SidebarItem";
+import SelectInput from "../Form/SelectInput";
 
 const Button = () => {
   const [variant, setVariant] =
@@ -30,23 +31,32 @@ const Button = () => {
   };
   return (
     <SidebarItem title="Button">
-      <Typography>Defaults</Typography>
+      <Typography>Prop defaults</Typography>
 
       <Box sx={{ minWidth: 120 }}>
-        <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">variant</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={variant}
-            label="variant"
-            onChange={handleChange}
-          >
-            <MenuItem value="contained">contained</MenuItem>
-            <MenuItem value="outlined">outlined</MenuItem>
-            <MenuItem value="text">text</MenuItem>
-          </Select>
-        </FormControl>
+        <SelectInput
+          field="button.color"
+          label="Color"
+          options={[
+            "inherit",
+            "primary",
+            "secondary",
+            "success",
+            "error",
+            "info",
+            "warning",
+          ]}
+        />
+        <SelectInput
+          field="button.size"
+          label="Size"
+          options={["small", "medium", "large"]}
+        />
+        <SelectInput
+          field="button.variant"
+          label="Variant"
+          options={["contained", "outlined", "text"]}
+        />
       </Box>
     </SidebarItem>
   );

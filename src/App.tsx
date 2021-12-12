@@ -8,8 +8,10 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import theme from "./theme";
 import Sidebar from "./Sidebar";
+import { useFormikContext } from "formik";
 
 const App = () => {
+  const { values, handleChange, touched, errors } = useFormikContext<any>();
   return (
     <Grid container spacing={2}>
       <Grid item xs={3}>
@@ -29,6 +31,8 @@ const App = () => {
         <MuiTypography variant="caption">Content goes here</MuiTypography>
         <MuiTypography variant="button">Content goes here</MuiTypography>
         <MuiTypography variant="overline">Content goes here</MuiTypography>
+
+        <MuiButton variant={values.button.variant}>Woot</MuiButton>
 
         <Stack spacing={2} direction="row">
           <MuiButton variant="contained">Button CTA</MuiButton>

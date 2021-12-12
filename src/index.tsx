@@ -95,6 +95,12 @@ interface Values {
   overlineFontWeight: any;
   overlineLineHeight: any;
   overlineLetterSpacing: any;
+  // buttonDefaultVariant: any;
+  button: {
+    color: any;
+    size: any;
+    variant: any;
+  };
 }
 
 ReactDOM.render(
@@ -106,7 +112,7 @@ ReactDOM.render(
       errorColor: "#EB0014",
       warningColor: "#F1A204",
       successColor: "#1DB45A",
-      textPrimaryColor: '#111111',
+      textPrimaryColor: "#111111",
       borderRadius: 4,
       htmlFontSize: 16,
       fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
@@ -179,6 +185,11 @@ ReactDOM.render(
       overlineFontWeight: 400,
       overlineLineHeight: 2.66,
       overlineLetterSpacing: "0.08333em",
+      button: {
+        color: "primary",
+        size: "medium",
+        variant: "contained",
+      },
     }}
     onSubmit={(values: Values, { setSubmitting }: FormikHelpers<Values>) => {
       setTimeout(() => {
@@ -325,6 +336,11 @@ ReactDOM.render(
         components: {
           // ...theme.components,
           MuiButton: {
+            defaultProps: {
+              color: values.button.color,
+              size: values.button.size,
+              variant: values.button.variant,
+            },
             styleOverrides: {
               containedPrimary: {
                 "&.Mui-focusVisible": {
