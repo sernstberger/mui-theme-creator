@@ -55,7 +55,7 @@ const Button = () => {
         <SelectInput
           field="button.variant"
           label="Variant"
-          options={["contained", "outlined", "text"]}
+          options={["contained", "outlined", "text", "dashed"]}
         />
       </Box>
     </SidebarItem>

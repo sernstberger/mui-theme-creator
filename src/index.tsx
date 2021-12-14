@@ -337,6 +337,15 @@ ReactDOM.render(
             },
             components: {
               MuiButton: {
+                variants: [
+                  {
+                    props: { variant: 'dashed' },
+                    style: {
+                      textTransform: 'none',
+                      border: `2px dashed #000`,
+                    },
+                  },
+                ],
                 defaultProps: {
                   // color: values.button.color,
                   // size: values.button.size,
