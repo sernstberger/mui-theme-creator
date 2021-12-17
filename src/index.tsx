@@ -129,7 +129,7 @@ ReactDOM.render(
         letterSpacing: "0.01071em",
       },
       button: {
-        fontFamily: null,
+        fontFamily: 'inherit',
         fontSize: {
           number: 0.875,
           unit: "rem",
