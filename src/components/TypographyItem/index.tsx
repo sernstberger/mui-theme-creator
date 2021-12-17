@@ -7,11 +7,11 @@ const TypographyItem = ({ variant }: any) => {
   return (
     <Layout title={variant}>
       <Stack spacing={2}>
-        <FontSize field={`${variant}FontSize`} />
-        <FontWeight field={`${variant}FontWeight`} />
-        <TextInput field={`${variant}LineHeight`} label="Line height" />
-        <TextInput field={`${variant}LetterSpacing`} label="Letter spacing" />
-        <TextTransform field={`${variant}TextTransform`} />
+        <FontSize field={`${variant}.fontSize`} />
+        <FontWeight field={`${variant}.fontWeight`} />
+        <TextInput field={`${variant}.lineHeight`} label="Line height" />
+        <TextInput field={`${variant}.letterSpacing`} label="Letter spacing" />
+        <TextTransform field={`${variant}.textTransform`} />
         {/* <Button variant="contained">Add property</Button> */}
       </Stack>
     </Layout>
