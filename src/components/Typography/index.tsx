@@ -2,13 +2,23 @@ import { Stack } from "@mui/material";
 import TextInput from "../Form/TextInput";
 import Layout from "../../Sidebar/SidebarItem";
 import TypographyItem from "../TypographyItem";
+import SelectInput from "../Form/SelectInput";
 
 const Typography = () => {
   return (
     <Layout title="Typography">
       <Stack spacing={2}>
         <TextInput field="htmlFontSize" type="number" label="HTML font size" />
-        <TextInput field="fontFamily" label="Font family" />
+
+        <SelectInput
+          field="fontFamily"
+          label="Font family"
+          options={[
+            "'Roboto', 'Helvetica', 'Arial', sans-serif",
+            "'Redacted Script', cursive",
+            "'Montserrat', sans-serif",
+          ]}
+        />
       </Stack>
       <br />
       <TypographyItem variant="h1" />
