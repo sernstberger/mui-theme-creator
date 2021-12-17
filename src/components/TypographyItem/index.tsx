@@ -2,6 +2,7 @@ import TextInput from "../Form/TextInput";
 import { Stack, Typography as MuiTypography } from "@mui/material";
 import { FontSize, FontWeight, TextTransform } from "../CssProperties";
 import Layout from "../../Sidebar/SidebarItem";
+import FontFamily from "../CssProperties/FontFamily";
 
 const TypographyItem = ({ variant }: any) => {
   return (
@@ -12,6 +13,7 @@ const TypographyItem = ({ variant }: any) => {
         <TextInput field={`${variant}.lineHeight`} label="Line height" />
         <TextInput field={`${variant}.letterSpacing`} label="Letter spacing" />
         <TextTransform field={`${variant}.textTransform`} />
+        <FontFamily field={`${variant}.fontFamily`} />
         {/* <Button variant="contained">Add property</Button> */}
       </Stack>
     </Layout>

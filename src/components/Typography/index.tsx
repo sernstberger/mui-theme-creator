@@ -3,22 +3,14 @@ import TextInput from "../Form/TextInput";
 import Layout from "../../Sidebar/SidebarItem";
 import TypographyItem from "../TypographyItem";
 import SelectInput from "../Form/SelectInput";
+import FontFamily from "../CssProperties/FontFamily";
 
 const Typography = () => {
   return (
     <Layout title="Typography">
       <Stack spacing={2}>
         <TextInput field="htmlFontSize" type="number" label="HTML font size" />
-
-        <SelectInput
-          field="fontFamily"
-          label="Font family"
-          options={[
-            "'Roboto', 'Helvetica', 'Arial', sans-serif",
-            "'Redacted Script', cursive",
-            "'Montserrat', sans-serif",
-          ]}
-        />
+        <FontFamily field="fontFamily" />
       </Stack>
       <br />
       <TypographyItem variant="h1" />

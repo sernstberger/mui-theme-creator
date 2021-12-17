@@ -7,7 +7,7 @@ interface FontSizeProps {
   unit: string;
 }
 interface TypographyStyles {
-  fontFamily?: string;
+  fontFamily?: string | null;
   fontSize: FontSizeProps;
   fontWeight: number | string;
   lineHeight: number | string;
@@ -59,77 +59,77 @@ ReactDOM.render(
       htmlFontSize: 16,
       fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
       h1: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 6, unit: "rem" },
         fontWeight: 300,
         lineHeight: 1.167,
         letterSpacing: "-0.01562em",
       },
       h2: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 3.75, unit: "rem" },
         fontWeight: 300,
         lineHeight: 1.2,
         letterSpacing: "-0.00833em",
       },
       h3: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 3, unit: "rem" },
         fontWeight: 400,
         lineHeight: 1.167,
         letterSpacing: "0em",
       },
       h4: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 2.125, unit: "rem" },
         fontWeight: 400,
         lineHeight: 1.235,
         letterSpacing: "0.00735em",
       },
       h5: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 1.5, unit: "rem" },
         fontWeight: 400,
         lineHeight: 1.334,
         letterSpacing: "0em",
       },
       h6: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 1.25, unit: "rem" },
         fontWeight: 500,
         lineHeight: 1.6,
         letterSpacing: "0.0075em",
       },
       subtitle1: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 1, unit: "rem" },
         fontWeight: 400,
         lineHeight: 1.75,
         letterSpacing: "0.00938em",
       },
       subtitle2: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 0.875, unit: "rem" },
         fontWeight: 500,
         lineHeight: 1.57,
         letterSpacing: "0.00714em",
       },
       body1: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 1, unit: "rem" },
         fontWeight: 400,
         lineHeight: 1.5,
         letterSpacing: "0.00938em",
       },
       body2: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 0.875, unit: "rem" },
         fontWeight: 400,
         lineHeight: 1.43,
         letterSpacing: "0.01071em",
       },
       button: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: {
           number: 0.875,
           unit: "rem",
@@ -140,14 +140,14 @@ ReactDOM.render(
         textTransform: "uppercase",
       },
       caption: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 0.75, unit: "rem" },
         fontWeight: 400,
         lineHeight: 1.66,
         letterSpacing: "0.03333em",
       },
       overline: {
-        fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
+        fontFamily: null,
         fontSize: { number: 0.75, unit: "rem" },
         fontWeight: 400,
         lineHeight: 2.66,

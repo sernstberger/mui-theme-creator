@@ -8,7 +8,7 @@ const theme = () => {
 
   const fontObject = (fontName: string) => {
     return {
-      // fontFamily: values[fontName].fontFamily,
+      fontFamily: values[fontName].fontFamily,
       fontSize: `${values[fontName].fontSize.number}${values[fontName].fontSize.unit}`,
       fontWeight: values[fontName].fontWeight,
       lineHeight: values[fontName].lineHeight,
