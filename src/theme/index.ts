@@ -4,13 +4,6 @@ import { alpha } from "@mui/material";
 
 const purple = "#7F56D9";
 
-// const theme = (what: any) => createTheme({
-//   palette: {
-//     primary: {
-//       main: what.primaryColor,
-//     },
-//   },
-// });
-const theme = 'foo'
+const theme = createTheme({ shape: { borderRadius: 0 } });
 
 export default theme;
