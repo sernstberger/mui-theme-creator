@@ -104,6 +104,11 @@ const theme = () => {
           },
         },
       },
+      MuiTextField: {
+        defaultProps: {
+          variant: values.textFieldDefaultProps.variant,
+        },
+      },
     },
   });
 };

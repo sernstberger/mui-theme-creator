@@ -3,6 +3,8 @@ import {
   Typography as MuiTypography,
   Button as MuiButton,
   Stack,
+  Divider,
+  TextField,
 } from "@mui/material";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -78,6 +80,12 @@ const App = () => {
                 Button CTA
               </MuiButton>
             </Stack>
+            <br />
+            <Divider />
+            <br />
+            <div>
+              <TextField label="Foooooo" />
+            </div>
           </>
         </ThemeProvider>
       </Grid>

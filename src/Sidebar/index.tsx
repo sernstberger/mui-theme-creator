@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import Palette from "../components/Palette";
 import Shape from "../components/Shape";
 import Typography from "../components/Typography";
+import TextField from "../components/TextField";
 
 const Sidebar = () => {
   return (
@@ -14,6 +15,7 @@ const Sidebar = () => {
         <Button />
         <Shape />
         <Typography />
+        <TextField />
       </Box>
     </ThemeProvider>
   );

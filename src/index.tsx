@@ -129,7 +129,7 @@ ReactDOM.render(
         letterSpacing: "0.01071em",
       },
       button: {
-        fontFamily: 'inherit',
+        fontFamily: "inherit",
         fontSize: {
           number: 0.875,
           unit: "rem",
@@ -157,6 +157,9 @@ ReactDOM.render(
         color: "primary",
         size: "medium",
         variant: "contained",
+      },
+      textFieldDefaultProps: {
+        variant: "outlined",
       },
     }}
     onSubmit={(values: Values, { setSubmitting }: FormikHelpers<any>) => {
