@@ -4,7 +4,7 @@ import theme from "../../theme";
 import Button from "./Button";
 import Palette from "./Palette";
 import Shape from "./Shape";
-import Typography from "../Typography";
+import Typography from "./Typography";
 import TextField from "./TextField";
 
 const Sidebar = () => {

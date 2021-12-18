@@ -1,9 +1,9 @@
 import { Stack } from "@mui/material";
-import TextInput from "../Form/TextInput";
-import Layout from "../Sidebar/SidebarItem";
-import TypographyItem from "../Sidebar/TypographyItem";
-import SelectInput from "../Form/SelectInput";
-import FontFamily from "../CssProperties/FontFamily";
+import TextInput from "../../Form/TextInput";
+import Layout from "../SidebarItem";
+import TypographyItem from "./TypographyItem";
+import SelectInput from "../../Form/SelectInput";
+import FontFamily from "../../CssProperties/FontFamily";
 
 const Typography = () => {
   return (
