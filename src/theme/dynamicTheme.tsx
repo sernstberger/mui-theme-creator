@@ -107,6 +107,9 @@ const theme = () => {
       MuiTextField: {
         defaultProps: {
           variant: values.textFieldDefaultProps.variant,
+          color: values.textFieldDefaultProps.color,
+          margin: values.textFieldDefaultProps.margin,
+          size: values.textFieldDefaultProps.size,
         },
       },
     },

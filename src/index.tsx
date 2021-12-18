@@ -43,6 +43,20 @@ interface Values {
     size: any;
     variant: any;
   };
+
+  textFieldDefaultProps: {
+    color:
+      | "primary"
+      | "secondary"
+      | "error"
+      | "info"
+      | "success"
+      | "warning"
+      | string;
+    margin: "none" | "dense" | "normal" | string;
+    size: "medium" | "small" | string;
+    variant: "filled" | "outlined" | "standard" | string;
+  };
 }
 
 ReactDOM.render(
@@ -159,6 +173,9 @@ ReactDOM.render(
         variant: "contained",
       },
       textFieldDefaultProps: {
+        color: "primary",
+        margin: "none",
+        size: "medium",
         variant: "outlined",
       },
     }}

@@ -7,6 +7,28 @@ const TextField = () => {
     <Layout title="TextField">
       <Stack spacing={2}>
         <SelectInput
+          field="textFieldDefaultProps.color"
+          label="Color"
+          options={[
+            "primary",
+            "secondary",
+            "error",
+            "info",
+            "success",
+            "warning",
+          ]}
+        />
+        <SelectInput
+          field="textFieldDefaultProps.margin"
+          label="Margin"
+          options={["none", "dense", "normal"]}
+        />
+        <SelectInput
+          field="textFieldDefaultProps.size"
+          label="Size"
+          options={["medium", "small"]}
+        />
+        <SelectInput
           field="textFieldDefaultProps.variant"
           label="Variant"
           options={["filled", "outlined", "standard"]}
