@@ -20,7 +20,7 @@ const Accordion = styled((props: AccordionProps) => (
 
 const SidebarItem = ({ title, children }: any) => {
   return (
-    <Accordion>
+    <Accordion defaultExpanded>
       <AccordionSummary
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
