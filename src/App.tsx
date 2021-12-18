@@ -10,7 +10,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import theme from "./theme";
 import dynamicTheme from "./theme/dynamicTheme";
-import Sidebar from "./Sidebar";
+import Sidebar from "./components/Sidebar";
 import { useFormikContext } from "formik";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";

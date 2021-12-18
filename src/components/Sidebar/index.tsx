@@ -1,11 +1,11 @@
 import Box from "@mui/material/Box";
 import { ThemeProvider } from "@mui/material";
-import theme from "../theme";
-import Button from "../components/Button";
-import Palette from "../components/Palette";
-import Shape from "../components/Shape";
-import Typography from "../components/Typography";
-import TextField from "../components/TextField";
+import theme from "../../theme";
+import Button from "./Button";
+import Palette from "./Palette";
+import Shape from "./Shape";
+import Typography from "../Typography";
+import TextField from "./TextField";
 
 const Sidebar = () => {
   return (

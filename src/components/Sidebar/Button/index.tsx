@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import SidebarItem from "../../Sidebar/SidebarItem";
-import SelectInput from "../Form/SelectInput";
+import SidebarItem from "../SidebarItem";
+import SelectInput from "../../Form/SelectInput";
 
 const Button = () => {
   return (

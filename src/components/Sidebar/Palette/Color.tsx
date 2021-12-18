@@ -5,7 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import { Formik, Field, Form, FormikHelpers, useFormikContext } from "formik";
 import { Stack, TextField } from "@mui/material";
-import TextInput from "../Form/TextInput";
+import TextInput from "../../Form/TextInput";
 
 const Color = ({ field, label }: any) => {
   const { values, handleChange, touched, errors } = useFormikContext<any>();

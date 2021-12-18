@@ -1,6 +1,6 @@
 import { Divider, Stack } from "@mui/material";
-import Layout from "../../Sidebar/SidebarItem";
-import SelectInput from "../Form/SelectInput";
+import Layout from "../SidebarItem";
+import SelectInput from "../../Form/SelectInput";
 
 const TextField = () => {
   return (
