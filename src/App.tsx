@@ -26,7 +26,9 @@ const App = () => {
           <Sidebar />
         </ThemeProvider>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={9}>
+
+
         <ThemeProvider theme={dynamicTheme()}>
           <CssBaseline />
           <>
@@ -123,17 +125,19 @@ const App = () => {
               <ColorSwatch color={values.palette.success.dark} />
               <ColorSwatch color={values.palette.success.contrastText} />
             </Stack>
+            <br />
+            <Divider />
+            <br />
+            <SyntaxHighlighter
+              language="typescript"
+              style={dark}
+              wrapLines={true}
+            >
+              {JSON.stringify(dynamicTheme())}
+            </SyntaxHighlighter>
+            {JSON.stringify(dynamicTheme())}
           </>
         </ThemeProvider>
-      </Grid>
-      <Grid item xs={3}>
-        <SyntaxHighlighter language="typescript" style={dark} wrapLines={true}>
-          {JSON.stringify(theme)}
-
-          {/* {`${theme}`} */}
-        </SyntaxHighlighter>
-
-        {/* {JSON.stringify(theme)} */}
       </Grid>
     </Grid>
   );

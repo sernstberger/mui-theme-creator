@@ -30,6 +30,7 @@ const theme = () => {
         xl: values.breakpoints.xl,
       },
     },
+    direction: values.direction,
     palette: {
       primary: createPaletteColor(values.palette.primary.main),
       secondary: createPaletteColor(values.palette.secondary.main),

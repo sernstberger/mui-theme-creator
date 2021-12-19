@@ -30,6 +30,7 @@ interface Values {
     lg: number;
     xl: number;
   };
+  direction: "ltr" | "rtl" | string;
   palette: {
     primary: PaletteColor;
     secondary: PaletteColor;
@@ -88,6 +89,7 @@ ReactDOM.render(
         lg: 1200,
         xl: 1536,
       },
+      direction: "ltr",
       palette: {
         primary: createPaletteColor("#7F56D9"),
         secondary: createPaletteColor("#F50057"),

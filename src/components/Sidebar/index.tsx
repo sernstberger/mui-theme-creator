@@ -7,12 +7,14 @@ import Shape from "./Shape";
 import Typography from "./Typography";
 import TextField from "./TextField";
 import Breakpoints from "./Breakpoints";
+import Direction from "./Direction";
 
 const Sidebar = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box height="100vh" overflow="scroll">
         <Breakpoints />
+        <Direction />
         {/* direction */}
         {/* components */}
         <Button />
