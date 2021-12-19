@@ -7,6 +7,7 @@ import {
   TextField,
   Container,
   Box,
+  Button,
 } from "@mui/material";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -17,6 +18,7 @@ import { useFormikContext } from "formik";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import ColorSwatch from "./components/ColorSwatch";
+import CodeDialog from "./components/CodeDialog";
 
 const App = () => {
   const { values } = useFormikContext<any>();
@@ -31,6 +33,10 @@ const App = () => {
         </Grid>
         <Grid item xs={9}>
           <Box height="100vh" overflow="scroll">
+            <div>
+              <CodeDialog />
+              <Divider />
+            </div>
             <ThemeProvider theme={dynamicTheme()}>
               <CssBaseline />
               <>
@@ -137,17 +143,6 @@ const App = () => {
                   <ColorSwatch color={values.palette.success.dark} />
                   <ColorSwatch color={values.palette.success.contrastText} />
                 </Stack>
-                <br />
-                <Divider />
-                <br />
-                <SyntaxHighlighter
-                  language="typescript"
-                  style={dark}
-                  wrapLines={true}
-                >
-                  {JSON.stringify(dynamicTheme())}
-                </SyntaxHighlighter>
-                {JSON.stringify(dynamicTheme())}
               </>
             </ThemeProvider>
           </Box>
