@@ -14,6 +14,7 @@ import Sidebar from "./components/Sidebar";
 import { useFormikContext } from "formik";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
+import ColorSwatch from "./components/ColorSwatch";
 
 const App = () => {
   const { values } = useFormikContext<any>();
@@ -86,6 +87,22 @@ const App = () => {
             <div>
               <TextField label="Foooooo" />
             </div>
+            <br />
+            <Divider />
+            <br />
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.primary.light} />
+              <ColorSwatch color={values.palette.primary.main} />
+              <ColorSwatch color={values.palette.primary.dark} />
+              <ColorSwatch color={values.palette.primary.contrastText} />
+            </Stack>
+
+            {/* <Stack direction="row">
+              <ColorSwatch color={values.palette.secondary.light} />
+              <ColorSwatch color={values.palette.secondary.main} />
+              <ColorSwatch color={values.palette.secondary.dark} />
+              <ColorSwatch color={values.palette.secondary.contrastText} />
+            </Stack> */}
           </>
         </ThemeProvider>
       </Grid>

@@ -14,9 +14,19 @@ interface TypographyStyles {
   letterSpacing: number | string;
 }
 
+interface Foo {
+  light: string;
+  main: string;
+  dark: string;
+  contrastText: string;
+}
+
 interface Values {
-  primaryColor: string;
-  secondaryColor: string;
+  palette: {
+    primary: Foo;
+    secondary: Foo;
+  };
+
   errorColor: string;
   warningColor: string;
   successColor: string;
@@ -63,8 +73,21 @@ ReactDOM.render(
   <Formik
     // enableReinitialize
     initialValues={{
-      primaryColor: "#7F56D9",
-      secondaryColor: "#F50057",
+      palette: {
+        primary: {
+          light: "#a08dc9",
+          main: "#7F56D9",
+          dark: "#4b2f8c",
+          contrastText: "#fff",
+        },
+        secondary: {
+          light: "#a08dc9",
+          main: "#F50057",
+          dark: "#4b2f8c",
+          contrastText: "#fff",
+        },
+      },
+
       errorColor: "#EB0014",
       warningColor: "#F1A204",
       successColor: "#1DB45A",

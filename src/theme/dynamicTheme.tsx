@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { alpha, lighten, darken } from "@mui/material";
+import { alpha, lighten, darken, getContrastRatio } from "@mui/material";
 import { useFormikContext } from "formik";
 
 const theme = () => {
@@ -21,15 +21,15 @@ const theme = () => {
     },
     palette: {
       primary: {
-        light: lighten(values.primaryColor, 0.5),
-        main: values.primaryColor,
-        dark: darken(values.primaryColor, 0.1),
+        light: lighten(values.palette.primary.main, 0.5),
+        main: values.palette.primary.main,
+        dark: darken(values.palette.primary.main, 0.1),
         contrastText: "#FFF",
       },
       secondary: {
-        light: lighten(values.secondaryColor, 0.5),
-        main: values.secondaryColor,
-        dark: darken(values.secondaryColor, 0.1),
+        light: lighten(values.palette.secondary.main, 0.5),
+        main: values.palette.secondary.main,
+        dark: darken(values.palette.secondary.main, 0.1),
         contrastText: "#FFF",
       },
 
@@ -87,15 +87,15 @@ const theme = () => {
         styleOverrides: {
           containedPrimary: {
             "&.Mui-focusVisible": {
-              boxShadow: `0 0 0 4px ${alpha(values.primaryColor, 0.2)}`,
+              boxShadow: `0 0 0 4px ${alpha(values.palette.primary.main, 0.2)}`,
             },
             // "&:hover": {
-            //   boxShadow: `0 0 0 4px ${alpha(values.primaryColor, 0.2)}`,
+            //   boxShadow: `0 0 0 4px ${alpha(values.palette.primary.main, 0.2)}`,
             // },
           },
           containedSecondary: {
             "&.Mui-focusVisible": {
-              boxShadow: `0 0 0 4px ${alpha(values.secondaryColor, 0.2)}`,
+              boxShadow: `0 0 0 4px ${alpha(values.palette.secondary.main, 0.2)}`,
             },
             // "&:hover": {
             //   boxShadow: `0 0 0 4px ${alpha(values.primaryColor, 0.2)}`,
