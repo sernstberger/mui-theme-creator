@@ -18,6 +18,7 @@ import {
   TextField,
   getContrastRatio,
   rgbToHex,
+  useTheme,
 } from "@mui/material";
 import TextInput from "../../Form/TextInput";
 import ColorSwatch from "../../ColorSwatch";
@@ -25,6 +26,7 @@ import ColorSwatch from "../../ColorSwatch";
 const Color = ({ field, label }: any) => {
   const { values, handleChange, touched, setFieldValue } =
     useFormikContext<any>();
+  const theme = useTheme();
 
   const bar = (meh: string) => getIn(values, `palette.${field}.${meh}`);
   console.log(
@@ -32,11 +34,13 @@ const Color = ({ field, label }: any) => {
     `palette.${field}.light`,
     bar("main"),
     rgbToHex(lighten(bar("main"), 0.5))
-    
   );
 
   useEffect(() => {
-    setFieldValue(`palette.${field}.light`, rgbToHex(lighten(bar("main"), 0.5)));
+    setFieldValue(
+      `palette.${field}.light`,
+      rgbToHex(lighten(bar("main"), 0.5))
+    );
     setFieldValue(`palette.${field}.dark`, darken(bar("main"), 0.1));
     const foo =
       getContrastRatio(values.palette[field].main, "#000") >= 3
