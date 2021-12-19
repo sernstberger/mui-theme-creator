@@ -8,6 +8,7 @@ import Typography from "./Typography";
 import TextField from "./TextField";
 import Breakpoints from "./Breakpoints";
 import Direction from "./Direction";
+import Spacing from "./Spacing";
 
 const Sidebar = () => {
   return (
@@ -15,13 +16,12 @@ const Sidebar = () => {
       <Box height="100vh" overflow="scroll">
         <Breakpoints />
         <Direction />
-        {/* direction */}
         {/* components */}
         <Button />
         <TextField />
 
         <Palette />
-        {/* spacing */}
+        <Spacing />
         <Shape />
         {/* mixins */}
         {/* shadows */}
