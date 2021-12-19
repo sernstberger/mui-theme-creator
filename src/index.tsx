@@ -15,7 +15,7 @@ interface TypographyStyles {
   letterSpacing: number | string;
 }
 
-interface Foo {
+interface PaletteColor {
   light: string;
   main: string;
   dark: string;
@@ -24,11 +24,11 @@ interface Foo {
 
 interface Values {
   palette: {
-    primary: Foo;
-    secondary: Foo;
-    error: Foo;
-    warning: Foo;
-    success: Foo;
+    primary: PaletteColor;
+    secondary: PaletteColor;
+    error: PaletteColor;
+    warning: PaletteColor;
+    success: PaletteColor;
   };
 
   textPrimaryColor: string;
