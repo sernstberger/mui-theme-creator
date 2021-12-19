@@ -34,14 +34,24 @@ const theme = () => {
       },
 
       error: {
-        main: values.errorColor,
+        light: lighten(values.palette.error.main, 0.5),
+        main: values.palette.error.main,
+        dark: darken(values.palette.error.main, 0.1),
+        contrastText: "#FFF",
       },
       warning: {
-        main: values.warningColor,
+        light: lighten(values.palette.warning.main, 0.5),
+        main: values.palette.warning.main,
+        dark: darken(values.palette.warning.main, 0.1),
+        contrastText: "#FFF",
       },
       success: {
-        main: values.successColor,
+        light: lighten(values.palette.success.main, 0.5),
+        main: values.palette.success.main,
+        dark: darken(values.palette.success.main, 0.1),
+        contrastText: "#FFF",
       },
+
       text: {
         primary: values.textPrimaryColor,
       },
@@ -95,7 +105,10 @@ const theme = () => {
           },
           containedSecondary: {
             "&.Mui-focusVisible": {
-              boxShadow: `0 0 0 4px ${alpha(values.palette.secondary.main, 0.2)}`,
+              boxShadow: `0 0 0 4px ${alpha(
+                values.palette.secondary.main,
+                0.2
+              )}`,
             },
             // "&:hover": {
             //   boxShadow: `0 0 0 4px ${alpha(values.primaryColor, 0.2)}`,

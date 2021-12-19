@@ -101,6 +101,27 @@ const App = () => {
               <ColorSwatch color={values.palette.secondary.dark} />
               <ColorSwatch color={values.palette.secondary.contrastText} />
             </Stack>
+            error
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.error.light} />
+              <ColorSwatch color={values.palette.error.main} />
+              <ColorSwatch color={values.palette.error.dark} />
+              <ColorSwatch color={values.palette.error.contrastText} />
+            </Stack>
+            warning
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.warning.light} />
+              <ColorSwatch color={values.palette.warning.main} />
+              <ColorSwatch color={values.palette.warning.dark} />
+              <ColorSwatch color={values.palette.warning.contrastText} />
+            </Stack>
+            success
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.success.light} />
+              <ColorSwatch color={values.palette.success.main} />
+              <ColorSwatch color={values.palette.success.dark} />
+              <ColorSwatch color={values.palette.success.contrastText} />
+            </Stack>
           </>
         </ThemeProvider>
       </Grid>

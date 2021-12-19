@@ -8,10 +8,10 @@ const Palette = () => {
       <Stack spacing={2}>
         <Color field="primary" label="Primary color" />
         <Color field="secondary" label="Secondary color" />
-        {/* <Color field="errorColor" label="Error color" />
-        <Color field="warningColor" label="Warning color" />
-        <Color field="successColor" label="Success color" />
-        <Color field="textPrimaryColor" label="Text primary color" /> */}
+        <Color field="error" label="Error color" />
+        <Color field="warning" label="Warning color" />
+        <Color field="success" label="Success color" />
+        {/* <Color field="textPrimary" label="Text primary color" /> */}
       </Stack>
     </Layout>
   );

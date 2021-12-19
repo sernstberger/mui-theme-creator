@@ -25,11 +25,11 @@ interface Values {
   palette: {
     primary: Foo;
     secondary: Foo;
+    error: Foo;
+    warning: Foo;
+    success: Foo;
   };
 
-  errorColor: string;
-  warningColor: string;
-  successColor: string;
   textPrimaryColor: string;
   borderRadius: number;
   htmlFontSize: number;
@@ -86,11 +86,26 @@ ReactDOM.render(
           dark: "#4b2f8c",
           contrastText: "#fff",
         },
+        error: {
+          light: "#a08dc9",
+          main: "#EB0014",
+          dark: "#4b2f8c",
+          contrastText: "#fff",
+        },
+        warning: {
+          light: "#a08dc9",
+          main: "#F1A204",
+          dark: "#4b2f8c",
+          contrastText: "#fff",
+        },
+        success: {
+          light: "#a08dc9",
+          main: "#1DB45A",
+          dark: "#4b2f8c",
+          contrastText: "#fff",
+        },
       },
 
-      errorColor: "#EB0014",
-      warningColor: "#F1A204",
-      successColor: "#1DB45A",
       textPrimaryColor: "#111111",
       borderRadius: 4,
       htmlFontSize: 16,
