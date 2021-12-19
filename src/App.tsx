@@ -43,9 +43,7 @@ const App = () => {
             <MuiTypography variant="caption">Content goes here</MuiTypography>
             <MuiTypography variant="button">Content goes here</MuiTypography>
             <MuiTypography variant="overline">Content goes here</MuiTypography>
-
             <MuiButton variant={values.button.variant}>Woot</MuiButton>
-
             <Stack spacing={2} direction="row">
               <MuiButton variant="contained">Button CTA</MuiButton>
               <MuiButton variant="contained" className="Mui-hover">
@@ -58,7 +56,6 @@ const App = () => {
                 Button CTA
               </MuiButton>
             </Stack>
-
             <Stack spacing={2} direction="row">
               <MuiButton color="secondary" variant="contained">
                 Button CTA
@@ -90,19 +87,20 @@ const App = () => {
             <br />
             <Divider />
             <br />
+            primary
             <Stack direction="row">
               <ColorSwatch color={values.palette.primary.light} />
               <ColorSwatch color={values.palette.primary.main} />
               <ColorSwatch color={values.palette.primary.dark} />
               <ColorSwatch color={values.palette.primary.contrastText} />
             </Stack>
-
-            {/* <Stack direction="row">
+            secondary
+            <Stack direction="row">
               <ColorSwatch color={values.palette.secondary.light} />
               <ColorSwatch color={values.palette.secondary.main} />
               <ColorSwatch color={values.palette.secondary.dark} />
               <ColorSwatch color={values.palette.secondary.contrastText} />
-            </Stack> */}
+            </Stack>
           </>
         </ThemeProvider>
       </Grid>
