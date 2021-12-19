@@ -16,6 +16,10 @@ const theme = () => {
     };
   };
 
+  const pxToRem = (px: number) => {
+    return `${px / 16}rem`;
+  };
+
   return createTheme({
     shape: {
       borderRadius: values.borderRadius,
@@ -89,6 +93,16 @@ const theme = () => {
           variant: values.buttonDefaultProps.variant,
         },
         styleOverrides: {
+          root: {
+            padding: `${pxToRem(
+              values.buttonStyle.styleOverrides.padding[0]
+            )} ${pxToRem(
+              values.buttonStyle.styleOverrides.padding[1]
+            )} ${pxToRem(
+              values.buttonStyle.styleOverrides.padding[2]
+            )} ${pxToRem(values.buttonStyle.styleOverrides.padding[3])}`,
+          },
+
           containedPrimary: {
             "&.Mui-focusVisible": {
               boxShadow: `0 0 0 4px ${alpha(values.palette.primary.main, 0.2)}`,

@@ -57,7 +57,11 @@ interface Values {
   button: TypographyStyles;
   caption: TypographyStyles;
   overline: TypographyStyles;
-
+  buttonStyle: {
+    styleOverrides: {
+      padding: number[];
+    };
+  };
   buttonDefaultProps: {
     color: any;
     disabled: boolean;
@@ -200,6 +204,11 @@ ReactDOM.render(
         fontWeight: 400,
         lineHeight: 2.66,
         letterSpacing: "0.08333em",
+      },
+      buttonStyle: {
+        styleOverrides: {
+          padding: [6, 16, 6, 16],
+        },
       },
       buttonDefaultProps: {
         color: "primary",
