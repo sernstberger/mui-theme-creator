@@ -87,6 +87,7 @@ const App = () => {
             <br />
             <Divider />
             <br />
+            {/* TODO - make these color swatch code blocks dynamic */}
             primary
             <Stack direction="row">
               <ColorSwatch color={values.palette.primary.light} />

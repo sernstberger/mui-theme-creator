@@ -6,16 +6,26 @@ import Palette from "./Palette";
 import Shape from "./Shape";
 import Typography from "./Typography";
 import TextField from "./TextField";
+import Breakpoints from "./Breakpoints";
 
 const Sidebar = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box height="100vh" overflow="scroll">
-        <Palette />
+        <Breakpoints />
+        {/* direction */}
+        {/* components */}
         <Button />
-        <Shape />
-        <Typography />
         <TextField />
+
+        <Palette />
+        {/* spacing */}
+        <Shape />
+        {/* mixins */}
+        {/* shadows */}
+        <Typography />
+        {/* transitions */}
+        {/* zIndex */}
       </Box>
     </ThemeProvider>
   );

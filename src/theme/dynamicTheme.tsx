@@ -20,6 +20,16 @@ const theme = () => {
     shape: {
       borderRadius: values.borderRadius,
     },
+    breakpoints: {
+      keys: ["xs", "sm", "md", "lg", "xl"],
+      values: {
+        xs: values.breakpoints.xs,
+        sm: values.breakpoints.sm,
+        md: values.breakpoints.md,
+        lg: values.breakpoints.lg,
+        xl: values.breakpoints.xl,
+      },
+    },
     palette: {
       primary: createPaletteColor(values.palette.primary.main),
       secondary: createPaletteColor(values.palette.secondary.main),

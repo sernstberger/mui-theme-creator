@@ -23,6 +23,13 @@ interface PaletteColor {
 }
 
 interface Values {
+  breakpoints: {
+    xs: number;
+    sm: number;
+    md: number;
+    lg: number;
+    xl: number;
+  };
   palette: {
     primary: PaletteColor;
     secondary: PaletteColor;
@@ -74,6 +81,13 @@ ReactDOM.render(
   <Formik
     // enableReinitialize
     initialValues={{
+      breakpoints: {
+        xs: 0,
+        sm: 600,
+        md: 900,
+        lg: 1200,
+        xl: 1536,
+      },
       palette: {
         primary: createPaletteColor("#7F56D9"),
         secondary: createPaletteColor("#F50057"),
