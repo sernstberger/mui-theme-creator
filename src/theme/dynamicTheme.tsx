@@ -66,6 +66,11 @@ const theme = () => {
       overline: fontObject("overline"),
     },
     components: {
+      MuiButtonBase: {
+        defaultProps: {
+          disableRipple: false,
+        },
+      },
       MuiButton: {
         variants: [
           {
@@ -78,6 +83,8 @@ const theme = () => {
         ],
         defaultProps: {
           color: values.buttonDefaultProps.color,
+          disabled: values.buttonDefaultProps.disabled,
+          fullWidth: values.buttonDefaultProps.fullWidth,
           size: values.buttonDefaultProps.size,
           variant: values.buttonDefaultProps.variant,
         },

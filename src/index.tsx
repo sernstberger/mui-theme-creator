@@ -60,6 +60,8 @@ interface Values {
 
   buttonDefaultProps: {
     color: any;
+    disabled: boolean;
+    fullWidth: boolean;
     size: any;
     variant: any;
   };
@@ -201,6 +203,8 @@ ReactDOM.render(
       },
       buttonDefaultProps: {
         color: "primary",
+        disabled: false,
+        fullWidth: false,
         size: "medium",
         variant: "contained",
       },
