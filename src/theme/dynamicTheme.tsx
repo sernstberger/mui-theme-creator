@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material/styles";
-import { alpha, lighten, darken } from "@mui/material";
+import { alpha, lighten, darken, getContrastRatio } from "@mui/material";
 import { useFormikContext } from "formik";
+import { createPaletteColor } from "../utils";
 
 const theme = () => {
   const { values } = useFormikContext<any>();
@@ -20,28 +21,12 @@ const theme = () => {
       borderRadius: values.borderRadius,
     },
     palette: {
-      primary: {
-        light: lighten(values.primaryColor, 0.5),
-        main: values.primaryColor,
-        dark: darken(values.primaryColor, 0.1),
-        contrastText: "#FFF",
-      },
-      secondary: {
-        light: lighten(values.secondaryColor, 0.5),
-        main: values.secondaryColor,
-        dark: darken(values.secondaryColor, 0.1),
-        contrastText: "#FFF",
-      },
+      primary: createPaletteColor(values.palette.primary.main),
+      secondary: createPaletteColor(values.palette.secondary.main),
+      error: createPaletteColor(values.palette.error.main),
+      warning: createPaletteColor(values.palette.warning.main),
+      success: createPaletteColor(values.palette.success.main),
 
-      error: {
-        main: values.errorColor,
-      },
-      warning: {
-        main: values.warningColor,
-      },
-      success: {
-        main: values.successColor,
-      },
       text: {
         primary: values.textPrimaryColor,
       },
@@ -87,15 +72,18 @@ const theme = () => {
         styleOverrides: {
           containedPrimary: {
             "&.Mui-focusVisible": {
-              boxShadow: `0 0 0 4px ${alpha(values.primaryColor, 0.2)}`,
+              boxShadow: `0 0 0 4px ${alpha(values.palette.primary.main, 0.2)}`,
             },
             // "&:hover": {
-            //   boxShadow: `0 0 0 4px ${alpha(values.primaryColor, 0.2)}`,
+            //   boxShadow: `0 0 0 4px ${alpha(values.palette.primary.main, 0.2)}`,
             // },
           },
           containedSecondary: {
             "&.Mui-focusVisible": {
-              boxShadow: `0 0 0 4px ${alpha(values.secondaryColor, 0.2)}`,
+              boxShadow: `0 0 0 4px ${alpha(
+                values.palette.secondary.main,
+                0.2
+              )}`,
             },
             // "&:hover": {
             //   boxShadow: `0 0 0 4px ${alpha(values.primaryColor, 0.2)}`,

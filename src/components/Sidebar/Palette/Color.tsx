@@ -1,21 +1,25 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import { Formik, Field, Form, FormikHelpers, useFormikContext } from "formik";
-import { Stack, TextField } from "@mui/material";
+import { useEffect } from "react";
+import { useFormikContext, getIn } from "formik";
+import { Stack } from "@mui/material";
 import TextInput from "../../Form/TextInput";
+import ColorSwatch from "../../ColorSwatch";
+import { createPaletteColor } from "../../../utils";
 
 const Color = ({ field, label }: any) => {
-  const { values, handleChange, touched, errors } = useFormikContext<any>();
+  const { values, handleChange, touched, setFieldValue } =
+    useFormikContext<any>();
+
+  useEffect(() => {
+    const getColorString = (meh: string) =>
+      getIn(values, `palette.${field}.${meh}`);
+    const colorPaletteObj = createPaletteColor(getColorString("main"));
+    setFieldValue(`palette.${field}`, colorPaletteObj);
+  }, [values.palette[field].main]);
+
   return (
     <Stack direction="row" spacing={2}>
-      <Box style={{ backgroundColor: values[field] }} height={50} width={50} />
-      <TextInput {...{ field, label }} />
-      {/* <Box style={{ backgroundColor: values[field] }} height={50} width={50} />
-      <Box style={{ backgroundColor: values[field] }} height={50} width={50} />
-      <Box style={{ backgroundColor: values[field] }} height={50} width={50} /> */}
+      <ColorSwatch color={getIn(values, `palette.${field}.main`)} />
+      <TextInput field={`palette.${field}.main`} {...{ label }} />
     </Stack>
   );
 };

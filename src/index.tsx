@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import App from "./App";
 import { Formik, Form, FormikHelpers } from "formik";
+import { createPaletteColor } from "./utils";
 
 interface FontSizeProps {
   number: number;
@@ -14,12 +15,22 @@ interface TypographyStyles {
   letterSpacing: number | string;
 }
 
+interface PaletteColor {
+  light: string;
+  main: string;
+  dark: string;
+  contrastText: string;
+}
+
 interface Values {
-  primaryColor: string;
-  secondaryColor: string;
-  errorColor: string;
-  warningColor: string;
-  successColor: string;
+  palette: {
+    primary: PaletteColor;
+    secondary: PaletteColor;
+    error: PaletteColor;
+    warning: PaletteColor;
+    success: PaletteColor;
+  };
+
   textPrimaryColor: string;
   borderRadius: number;
   htmlFontSize: number;
@@ -63,11 +74,14 @@ ReactDOM.render(
   <Formik
     // enableReinitialize
     initialValues={{
-      primaryColor: "#7F56D9",
-      secondaryColor: "#F50057",
-      errorColor: "#EB0014",
-      warningColor: "#F1A204",
-      successColor: "#1DB45A",
+      palette: {
+        primary: createPaletteColor("#7F56D9"),
+        secondary: createPaletteColor("#F50057"),
+        error: createPaletteColor("#EB0014"),
+        warning: createPaletteColor("#F1A204"),
+        success: createPaletteColor("#00C853"),
+      },
+
       textPrimaryColor: "#111111",
       borderRadius: 4,
       htmlFontSize: 16,

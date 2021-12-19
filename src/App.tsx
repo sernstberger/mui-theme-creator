@@ -14,6 +14,7 @@ import Sidebar from "./components/Sidebar";
 import { useFormikContext } from "formik";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
+import ColorSwatch from "./components/ColorSwatch";
 
 const App = () => {
   const { values } = useFormikContext<any>();
@@ -42,9 +43,7 @@ const App = () => {
             <MuiTypography variant="caption">Content goes here</MuiTypography>
             <MuiTypography variant="button">Content goes here</MuiTypography>
             <MuiTypography variant="overline">Content goes here</MuiTypography>
-
             <MuiButton variant={values.button.variant}>Woot</MuiButton>
-
             <Stack spacing={2} direction="row">
               <MuiButton variant="contained">Button CTA</MuiButton>
               <MuiButton variant="contained" className="Mui-hover">
@@ -57,7 +56,6 @@ const App = () => {
                 Button CTA
               </MuiButton>
             </Stack>
-
             <Stack spacing={2} direction="row">
               <MuiButton color="secondary" variant="contained">
                 Button CTA
@@ -86,6 +84,44 @@ const App = () => {
             <div>
               <TextField label="Foooooo" />
             </div>
+            <br />
+            <Divider />
+            <br />
+            primary
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.primary.light} />
+              <ColorSwatch color={values.palette.primary.main} />
+              <ColorSwatch color={values.palette.primary.dark} />
+              <ColorSwatch color={values.palette.primary.contrastText} />
+            </Stack>
+            secondary
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.secondary.light} />
+              <ColorSwatch color={values.palette.secondary.main} />
+              <ColorSwatch color={values.palette.secondary.dark} />
+              <ColorSwatch color={values.palette.secondary.contrastText} />
+            </Stack>
+            error
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.error.light} />
+              <ColorSwatch color={values.palette.error.main} />
+              <ColorSwatch color={values.palette.error.dark} />
+              <ColorSwatch color={values.palette.error.contrastText} />
+            </Stack>
+            warning
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.warning.light} />
+              <ColorSwatch color={values.palette.warning.main} />
+              <ColorSwatch color={values.palette.warning.dark} />
+              <ColorSwatch color={values.palette.warning.contrastText} />
+            </Stack>
+            success
+            <Stack direction="row">
+              <ColorSwatch color={values.palette.success.light} />
+              <ColorSwatch color={values.palette.success.main} />
+              <ColorSwatch color={values.palette.success.dark} />
+              <ColorSwatch color={values.palette.success.contrastText} />
+            </Stack>
           </>
         </ThemeProvider>
       </Grid>
