@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import App from "./App";
 import { Formik, Form, FormikHelpers } from "formik";
+import { createPaletteColor } from "./utils";
 
 interface FontSizeProps {
   number: number;
@@ -74,36 +75,11 @@ ReactDOM.render(
     // enableReinitialize
     initialValues={{
       palette: {
-        primary: {
-          light: "#a08dc9",
-          main: "#7F56D9",
-          dark: "#4b2f8c",
-          contrastText: "#fff",
-        },
-        secondary: {
-          light: "#a08dc9",
-          main: "#F50057",
-          dark: "#4b2f8c",
-          contrastText: "#fff",
-        },
-        error: {
-          light: "#a08dc9",
-          main: "#EB0014",
-          dark: "#4b2f8c",
-          contrastText: "#fff",
-        },
-        warning: {
-          light: "#a08dc9",
-          main: "#F1A204",
-          dark: "#4b2f8c",
-          contrastText: "#fff",
-        },
-        success: {
-          light: "#a08dc9",
-          main: "#1DB45A",
-          dark: "#4b2f8c",
-          contrastText: "#fff",
-        },
+        primary: createPaletteColor("#7F56D9"),
+        secondary: createPaletteColor("#F50057"),
+        error: createPaletteColor("#EB0014"),
+        warning: createPaletteColor("#F1A204"),
+        success: createPaletteColor("#00C853"),
       },
 
       textPrimaryColor: "#111111",

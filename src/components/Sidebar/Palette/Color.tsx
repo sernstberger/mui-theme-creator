@@ -42,12 +42,10 @@ const Color = ({ field, label }: any) => {
       rgbToHex(lighten(bar("main"), 0.5))
     );
     setFieldValue(`palette.${field}.dark`, darken(bar("main"), 0.1));
-    const foo =
-      getContrastRatio(values.palette[field].main, "#000") >= 3
-        ? "#000"
-        : "#fff";
-    setFieldValue("palette.primary.contrastText", foo);
-    console.log("^^^", foo);
+    const contrastRatio = getContrastRatio("#FFF", values.palette[field].main);
+    const contrastText = contrastRatio >= 3 ? "#FFF" : "#000";
+    console.log("^^^", field, contrastText, contrastRatio);
+    setFieldValue("palette.primary.contrastText", contrastText);
   }, [values.palette[field].main]);
 
   return (

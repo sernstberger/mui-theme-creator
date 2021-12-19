@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import { alpha, lighten, darken, getContrastRatio } from "@mui/material";
 import { useFormikContext } from "formik";
+import { createPaletteColor } from "../utils";
 
 const theme = () => {
   const { values } = useFormikContext<any>();
@@ -20,37 +21,11 @@ const theme = () => {
       borderRadius: values.borderRadius,
     },
     palette: {
-      primary: {
-        light: lighten(values.palette.primary.main, 0.5),
-        main: values.palette.primary.main,
-        dark: darken(values.palette.primary.main, 0.1),
-        contrastText: "#FFF",
-      },
-      secondary: {
-        light: lighten(values.palette.secondary.main, 0.5),
-        main: values.palette.secondary.main,
-        dark: darken(values.palette.secondary.main, 0.1),
-        contrastText: "#FFF",
-      },
-
-      error: {
-        light: lighten(values.palette.error.main, 0.5),
-        main: values.palette.error.main,
-        dark: darken(values.palette.error.main, 0.1),
-        contrastText: "#FFF",
-      },
-      warning: {
-        light: lighten(values.palette.warning.main, 0.5),
-        main: values.palette.warning.main,
-        dark: darken(values.palette.warning.main, 0.1),
-        contrastText: "#FFF",
-      },
-      success: {
-        light: lighten(values.palette.success.main, 0.5),
-        main: values.palette.success.main,
-        dark: darken(values.palette.success.main, 0.1),
-        contrastText: "#FFF",
-      },
+      primary: createPaletteColor(values.palette.primary.main),
+      secondary: createPaletteColor(values.palette.secondary.main),
+      error: createPaletteColor(values.palette.error.main),
+      warning: createPaletteColor(values.palette.warning.main),
+      success: createPaletteColor(values.palette.success.main),
 
       text: {
         primary: values.textPrimaryColor,
