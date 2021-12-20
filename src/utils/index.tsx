@@ -11,4 +11,4 @@ const createPaletteColor = (color: string) => {
   };
 };
 
-export { createPaletteColor };
+export { createPaletteColor }
