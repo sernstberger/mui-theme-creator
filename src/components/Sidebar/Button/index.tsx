@@ -2,8 +2,9 @@ import { Box, Divider, Stack, Typography } from "@mui/material";
 import SidebarItem from "../SidebarItem";
 import SelectInput from "../../Form/SelectInput";
 import Switch from "../../Form/Switch";
-import TextInput from "../../Form/TextInput";
-import Padding from "../../CssProperties/Padding";
+import { Padding } from "../../CssProperties";
+import _BoxModel from "../../CssProperties/_BoxModel";
+import Margin from "../../CssProperties/Margin";
 
 const Button = () => {
   return (
@@ -41,6 +42,7 @@ const Button = () => {
           <Divider />
           <Typography variant="subtitle2">Style defaults</Typography>
           <Padding field="buttonStyle.styleOverrides.padding" />
+          <Margin field="buttonStyle.styleOverrides.margin" />
         </Stack>
       </Box>
     </SidebarItem>

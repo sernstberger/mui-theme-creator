@@ -101,6 +101,14 @@ const theme = () => {
             )} ${pxToRem(
               values.buttonStyle.styleOverrides.padding[2]
             )} ${pxToRem(values.buttonStyle.styleOverrides.padding[3])}`,
+
+            margin: `${pxToRem(
+              values.buttonStyle.styleOverrides.margin[0]
+            )} ${pxToRem(
+              values.buttonStyle.styleOverrides.margin[1]
+            )} ${pxToRem(
+              values.buttonStyle.styleOverrides.margin[2]
+            )} ${pxToRem(values.buttonStyle.styleOverrides.margin[3])}`,
           },
 
           containedPrimary: {

@@ -59,6 +59,7 @@ interface Values {
   overline: TypographyStyles;
   buttonStyle: {
     styleOverrides: {
+      margin: number[];
       padding: number[];
     };
   };
@@ -208,6 +209,7 @@ ReactDOM.render(
       buttonStyle: {
         styleOverrides: {
           padding: [6, 16, 6, 16],
+          margin: [0],
         },
       },
       buttonDefaultProps: {
