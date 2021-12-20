@@ -6,6 +6,7 @@ const FontFamily = ({ field }: any) => {
       {...{ field }}
       label="Font family"
       options={[
+        "inherit",
         "'Roboto', 'Helvetica', 'Arial', sans-serif",
         "'Redacted Script', cursive",
         "'Montserrat', sans-serif",

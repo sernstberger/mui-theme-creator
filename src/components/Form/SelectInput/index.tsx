@@ -39,9 +39,17 @@ const SelectInput = ({
       >
         {options.map((option: string | number | OptionProps) => {
           if (typeof option === "string" || typeof option === "number") {
-            return <MenuItem value={option}>{option}</MenuItem>;
+            return (
+              <MenuItem value={option} key={option}>
+                {option}
+              </MenuItem>
+            );
           }
-          return <MenuItem value={option.value}>{option.label}</MenuItem>;
+          return (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          );
         })}
       </Select>
     </FormControl>
