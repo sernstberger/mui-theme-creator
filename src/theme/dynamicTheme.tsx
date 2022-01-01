@@ -86,29 +86,29 @@ const theme = () => {
           },
         ],
         defaultProps: {
-          color: values.buttonDefaultProps.color,
-          disabled: values.buttonDefaultProps.disabled,
-          fullWidth: values.buttonDefaultProps.fullWidth,
-          size: values.buttonDefaultProps.size,
-          variant: values.buttonDefaultProps.variant,
+          color: values.components.Button.defaultProps.color,
+          disabled: values.components.Button.defaultProps.disabled,
+          fullWidth: values.components.Button.defaultProps.fullWidth,
+          size: values.components.Button.defaultProps.size,
+          variant: values.components.Button.defaultProps.variant,
         },
         styleOverrides: {
           root: {
             padding: `${pxToRem(
-              values.buttonStyle.styleOverrides.padding[0]
+              values.components.Button.styleOverrides.padding[0]
             )} ${pxToRem(
-              values.buttonStyle.styleOverrides.padding[1]
+              values.components.Button.styleOverrides.padding[1]
             )} ${pxToRem(
-              values.buttonStyle.styleOverrides.padding[2]
-            )} ${pxToRem(values.buttonStyle.styleOverrides.padding[3])}`,
+              values.components.Button.styleOverrides.padding[2]
+            )} ${pxToRem(values.components.Button.styleOverrides.padding[3])}`,
 
             margin: `${pxToRem(
-              values.buttonStyle.styleOverrides.margin[0]
+              values.components.Button.styleOverrides.margin[0]
             )} ${pxToRem(
-              values.buttonStyle.styleOverrides.margin[1]
+              values.components.Button.styleOverrides.margin[1]
             )} ${pxToRem(
-              values.buttonStyle.styleOverrides.margin[2]
-            )} ${pxToRem(values.buttonStyle.styleOverrides.margin[3])}`,
+              values.components.Button.styleOverrides.margin[2]
+            )} ${pxToRem(values.components.Button.styleOverrides.margin[3])}`,
           },
 
           containedPrimary: {
@@ -134,10 +134,10 @@ const theme = () => {
       },
       MuiTextField: {
         defaultProps: {
-          variant: values.textFieldDefaultProps.variant,
-          color: values.textFieldDefaultProps.color,
-          margin: values.textFieldDefaultProps.margin,
-          size: values.textFieldDefaultProps.size,
+          variant: values.components.TextField.defaultProps.variant,
+          color: values.components.TextField.defaultProps.color,
+          margin: values.components.TextField.defaultProps.margin,
+          size: values.components.TextField.defaultProps.size,
         },
       },
     },

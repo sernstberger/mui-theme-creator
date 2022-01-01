@@ -22,69 +22,69 @@ interface PaletteColor {
   contrastText: string;
 }
 
-interface Values {
-  breakpoints: {
-    xs: number;
-    sm: number;
-    md: number;
-    lg: number;
-    xl: number;
-  };
-  spacing: number;
-  direction: "ltr" | "rtl" | string;
-  palette: {
-    primary: PaletteColor;
-    secondary: PaletteColor;
-    error: PaletteColor;
-    warning: PaletteColor;
-    success: PaletteColor;
-  };
+// interface Values {
+//   breakpoints: {
+//     xs: number;
+//     sm: number;
+//     md: number;
+//     lg: number;
+//     xl: number;
+//   };
+//   spacing: number;
+//   direction: "ltr" | "rtl" | string;
+//   palette: {
+//     primary: PaletteColor;
+//     secondary: PaletteColor;
+//     error: PaletteColor;
+//     warning: PaletteColor;
+//     success: PaletteColor;
+//   };
 
-  textPrimaryColor: string;
-  borderRadius: number;
-  htmlFontSize: number;
-  fontFamily: string;
-  h1: TypographyStyles;
-  h2: TypographyStyles;
-  h3: TypographyStyles;
-  h4: TypographyStyles;
-  h5: TypographyStyles;
-  h6: TypographyStyles;
-  subtitle1: TypographyStyles;
-  subtitle2: TypographyStyles;
-  body1: TypographyStyles;
-  body2: TypographyStyles;
-  button: TypographyStyles;
-  caption: TypographyStyles;
-  overline: TypographyStyles;
-  buttonStyle: {
-    styleOverrides: {
-      margin: number[];
-      padding: number[];
-    };
-  };
-  buttonDefaultProps: {
-    color: any;
-    disabled: boolean;
-    fullWidth: boolean;
-    size: any;
-    variant: any;
-  };
+//   textPrimaryColor: string;
+//   borderRadius: number;
+//   htmlFontSize: number;
+//   fontFamily: string;
+//   h1: TypographyStyles;
+//   h2: TypographyStyles;
+//   h3: TypographyStyles;
+//   h4: TypographyStyles;
+//   h5: TypographyStyles;
+//   h6: TypographyStyles;
+//   subtitle1: TypographyStyles;
+//   subtitle2: TypographyStyles;
+//   body1: TypographyStyles;
+//   body2: TypographyStyles;
+//   button: TypographyStyles;
+//   caption: TypographyStyles;
+//   overline: TypographyStyles;
+//   buttonStyle: {
+//     styleOverrides: {
+//       margin: number[];
+//       padding: number[];
+//     };
+//   };
+//   buttonDefaultProps: {
+//     color: any;
+//     disabled: boolean;
+//     fullWidth: boolean;
+//     size: any;
+//     variant: any;
+//   };
 
-  textFieldDefaultProps: {
-    color:
-      | "primary"
-      | "secondary"
-      | "error"
-      | "info"
-      | "success"
-      | "warning"
-      | string;
-    margin: "none" | "dense" | "normal" | string;
-    size: "medium" | "small" | string;
-    variant: "filled" | "outlined" | "standard" | string;
-  };
-}
+//   textFieldDefaultProps: {
+//     color:
+//       | "primary"
+//       | "secondary"
+//       | "error"
+//       | "info"
+//       | "success"
+//       | "warning"
+//       | string;
+//     margin: "none" | "dense" | "normal" | string;
+//     size: "medium" | "small" | string;
+//     variant: "filled" | "outlined" | "standard" | string;
+//   };
+// }
 
 ReactDOM.render(
   <Formik
@@ -206,27 +206,31 @@ ReactDOM.render(
         lineHeight: 2.66,
         letterSpacing: "0.08333em",
       },
-      buttonStyle: {
-        styleOverrides: {
-          padding: [6, 16, 6, 16],
-          margin: [0],
+      components: {
+        Button: {
+          styleOverrides: {
+            padding: [6, 16, 6, 16],
+            margin: [0],
+          },
+          defaultProps: {
+            color: "primary",
+            disabled: false,
+            fullWidth: false,
+            size: "medium",
+            variant: "contained",
+          },
+        },
+        TextField: {
+          defaultProps: {
+            color: "primary",
+            margin: "none",
+            size: "medium",
+            variant: "outlined",
+          },
         },
       },
-      buttonDefaultProps: {
-        color: "primary",
-        disabled: false,
-        fullWidth: false,
-        size: "medium",
-        variant: "contained",
-      },
-      textFieldDefaultProps: {
-        color: "primary",
-        margin: "none",
-        size: "medium",
-        variant: "outlined",
-      },
     }}
-    onSubmit={(values: Values, { setSubmitting }: FormikHelpers<any>) => {
+    onSubmit={(values: any, { setSubmitting }: FormikHelpers<any>) => {
       setTimeout(() => {
         alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
