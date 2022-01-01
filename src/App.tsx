@@ -63,8 +63,11 @@ const App = () => {
                 <MuiTypography variant="overline">
                   Content goes here
                 </MuiTypography>
+                
                 {/* <MuiButton variant={values.button.variant}>Woot</MuiButton> */}
-                <Stack spacing={2} direction="row">
+
+
+                {/* <Stack spacing={2} direction="row">
                   <MuiButton variant="contained">Button CTA</MuiButton>
                   <MuiButton variant="contained" className="Mui-hover">
                     Button CTA
@@ -75,8 +78,8 @@ const App = () => {
                   <MuiButton variant="contained" disabled>
                     Button CTA
                   </MuiButton>
-                </Stack>
-                <Stack spacing={2} direction="row">
+                </Stack> */}
+                {/* <Stack spacing={2} direction="row">
                   <MuiButton color="secondary" variant="contained">
                     Button CTA
                   </MuiButton>
@@ -97,7 +100,9 @@ const App = () => {
                   <MuiButton color="secondary" variant="contained" disabled>
                     Button CTA
                   </MuiButton>
-                </Stack>
+                </Stack> */}
+
+
                 <br />
                 <Divider />
                 <br />

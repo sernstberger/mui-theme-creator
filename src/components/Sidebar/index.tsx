@@ -90,7 +90,7 @@ const Sidebar = () => {
         <Shape />
         {/* mixins */}
         {/* shadows */}
-        <Typography />
+        {/* <Typography /> */}
         {/* transitions */}
         {/* zIndex */}
       </Box>
