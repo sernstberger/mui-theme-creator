@@ -63,7 +63,7 @@ const App = () => {
                 <MuiTypography variant="overline">
                   Content goes here
                 </MuiTypography>
-                <MuiButton variant={values.button.variant}>Woot</MuiButton>
+                {/* <MuiButton variant={values.button.variant}>Woot</MuiButton> */}
                 <Stack spacing={2} direction="row">
                   <MuiButton variant="contained">Button CTA</MuiButton>
                   <MuiButton variant="contained" className="Mui-hover">

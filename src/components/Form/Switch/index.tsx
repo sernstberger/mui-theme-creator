@@ -13,7 +13,7 @@ const Switch = ({ field, label }: any) => {
       {...{ label }}
       control={
         <MuiSwitch
-          checked={values.components.Button.defaultProps[field]}
+          checked={values.components.MuiButton.defaultProps[field]}
           onChange={handleChange}
           inputProps={{ "aria-label": "controlled" }}
         />

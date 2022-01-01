@@ -8,7 +8,6 @@ import TextField from "./TextField";
 import Breakpoints from "./Breakpoints";
 import Direction from "./Direction";
 import Spacing from "./Spacing";
-
 import {
   Box,
   Divider,
@@ -24,8 +23,9 @@ import Margin from "./../CssProperties/Margin";
 
 const components = ["Button", "TextField"];
 
-const Foo = ({ name }: any) => {
-  console.log(name);
+const Component = ({ name }: any) => {
+  const componentName = `components[Mui${name}]`;
+  console.log("!!!***", componentName, `${componentName}.defaultProps.color`);
   return (
     <SidebarItem title={name}>
       <MuiTypography variant="subtitle2">Prop defaults</MuiTypography>
@@ -33,7 +33,7 @@ const Foo = ({ name }: any) => {
       <Box sx={{ minWidth: 120 }}>
         <Stack spacing={2}>
           <SelectInput
-            field={`components[${name}].defaultProps.color`}
+            field={`${componentName}.defaultProps.color`}
             label="Color"
             options={[
               "inherit",
@@ -46,28 +46,28 @@ const Foo = ({ name }: any) => {
             ]}
           />
           <SelectInput
-            field={`components[${name}].defaultProps.size`}
+            field={`${componentName}.defaultProps.size`}
             label="Size"
             options={["small", "medium", "large"]}
           />
           <SelectInput
-            field={`components[${name}].defaultProps.variant`}
+            field={`${componentName}.defaultProps.variant`}
             label="Variant"
             options={["contained", "outlined", "text", "dashed"]}
           />
 
           <Switch
-            field={`components[${name}].defaultProps.disabled`}
+            field={`${componentName}.defaultProps.disabled`}
             label="Disabled"
           />
           <Switch
-            field={`components[${name}].defaultProps.fullWidth`}
+            field={`${componentName}.defaultProps.fullWidth`}
             label="Full width"
           />
           <Divider />
           <MuiTypography variant="subtitle2">Style defaults</MuiTypography>
-          <Padding field={`components[${name}].styleOverrides.padding`} />
-          <Margin field={`components[${name}].styleOverrides.margin`} />
+          <Padding field={`${componentName}.styleOverrides.root.padding`} />
+          <Margin field={`${componentName}.styleOverrides.root.margin`} />
         </Stack>
       </Box>
     </SidebarItem>
@@ -80,9 +80,9 @@ const Sidebar = () => {
       <Box height="100vh" overflow="scroll">
         <Breakpoints />
         <Direction />
-        {/* components */}
+
         {components.map((component) => {
-          return <Foo key={component} name={component} />;
+          return <Component key={component} name={component} />;
         })}
 
         <Palette />

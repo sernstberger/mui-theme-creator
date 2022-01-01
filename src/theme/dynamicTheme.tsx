@@ -8,11 +8,11 @@ const theme = () => {
 
   const fontObject = (fontName: string) => {
     return {
-      fontFamily: values[fontName].fontFamily,
-      fontSize: `${values[fontName].fontSize.number}${values[fontName].fontSize.unit}`,
-      fontWeight: values[fontName].fontWeight,
-      lineHeight: values[fontName].lineHeight,
-      letterSpacing: values[fontName].letterSpacing,
+      // fontFamily: values[fontName].fontFamily,
+      fontSize: values.typography[fontName].fontSize,
+      fontWeight: values.typography[fontName].fontWeight,
+      lineHeight: values.typography[fontName].lineHeight,
+      letterSpacing: values.typography[fontName].letterSpacing,
     };
   };
 
@@ -22,7 +22,7 @@ const theme = () => {
 
   return createTheme({
     shape: {
-      borderRadius: values.borderRadius,
+      borderRadius: values.shape.borderRadius,
     },
     breakpoints: {
       keys: ["xs", "sm", "md", "lg", "xl"],
@@ -86,29 +86,33 @@ const theme = () => {
           },
         ],
         defaultProps: {
-          color: values.components.Button.defaultProps.color,
-          disabled: values.components.Button.defaultProps.disabled,
-          fullWidth: values.components.Button.defaultProps.fullWidth,
-          size: values.components.Button.defaultProps.size,
-          variant: values.components.Button.defaultProps.variant,
+          color: values.components.MuiButton.defaultProps.color,
+          disabled: values.components.MuiButton.defaultProps.disabled,
+          fullWidth: values.components.MuiButton.defaultProps.fullWidth,
+          size: values.components.MuiButton.defaultProps.size,
+          variant: values.components.MuiButton.defaultProps.variant,
         },
         styleOverrides: {
           root: {
             padding: `${pxToRem(
-              values.components.Button.styleOverrides.padding[0]
+              values.components.MuiButton.styleOverrides.root.padding[0]
             )} ${pxToRem(
-              values.components.Button.styleOverrides.padding[1]
+              values.components.MuiButton.styleOverrides.root.padding[1]
             )} ${pxToRem(
-              values.components.Button.styleOverrides.padding[2]
-            )} ${pxToRem(values.components.Button.styleOverrides.padding[3])}`,
+              values.components.MuiButton.styleOverrides.root.padding[2]
+            )} ${pxToRem(
+              values.components.MuiButton.styleOverrides.root.padding[3]
+            )}`,
 
             margin: `${pxToRem(
-              values.components.Button.styleOverrides.margin[0]
+              values.components.MuiButton.styleOverrides.root.margin[0]
             )} ${pxToRem(
-              values.components.Button.styleOverrides.margin[1]
+              values.components.MuiButton.styleOverrides.root.margin[1]
             )} ${pxToRem(
-              values.components.Button.styleOverrides.margin[2]
-            )} ${pxToRem(values.components.Button.styleOverrides.margin[3])}`,
+              values.components.MuiButton.styleOverrides.root.margin[2]
+            )} ${pxToRem(
+              values.components.MuiButton.styleOverrides.root.margin[3]
+            )}`,
           },
 
           containedPrimary: {
@@ -134,10 +138,10 @@ const theme = () => {
       },
       MuiTextField: {
         defaultProps: {
-          variant: values.components.TextField.defaultProps.variant,
-          color: values.components.TextField.defaultProps.color,
-          margin: values.components.TextField.defaultProps.margin,
-          size: values.components.TextField.defaultProps.size,
+          variant: values.components.MuiTextField.defaultProps.variant,
+          color: values.components.MuiTextField.defaultProps.color,
+          margin: values.components.MuiTextField.defaultProps.margin,
+          size: values.components.MuiTextField.defaultProps.size,
         },
       },
     },
