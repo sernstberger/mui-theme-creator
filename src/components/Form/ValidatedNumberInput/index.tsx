@@ -18,15 +18,16 @@ const ValidatedNumberInput = ({
       {...rest}
       rules={{
         min: {
-          value: min as number,
+          value: min || 0,
           message: `cannot be below ${min}`,
         },
         max: {
-          value: max as number,
+          value: max || 0,
           message: `${max} max exceeded`,
         },
       }}
       // type="number"
+      // pattern="[0-9]*"
       inputProps={{ inputMode: "numeric" }}
     />
   );

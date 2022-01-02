@@ -18,11 +18,11 @@ const ValidatedTextInput = ({
       {...rest}
       rules={{
         minLength: {
-          value: minLength as number,
+          value: minLength || 0,
           message: `cannot be below ${minLength}`,
         },
         maxLength: {
-          value: maxLength as number,
+          value: maxLength || 0,
           message: `${maxLength} max exceeded`,
         },
       }}

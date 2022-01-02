@@ -31,6 +31,7 @@ export interface ValidatedInputBaseProps
   fieldName: string;
   customValidation?: any; // TODO - this needs to be a yup schema
   rules?: RulesProps;
+  pattern?: any
 }
 
 const ValidatedInputBase = ({
@@ -43,13 +44,15 @@ const ValidatedInputBase = ({
   defaultValue = undefined,
   customValidation = null,
   helperText = undefined,
+  pattern = undefined,
   ...rest
 }: ValidatedInputBaseProps) => {
   const validate = (_value: any) => {
     const validator = () => {
       try {
         customValidation.validateSync(_value); // validateSync comes from yup
-      } catch (e: any) {
+      } catch (e) {
+        // @ts-ignore
         return e.errors;
       }
     };
@@ -84,8 +87,8 @@ const ValidatedInputBase = ({
   return (
     <TextField
       {...rest}
-      {...{ value, onChange, type }}
-      label={`${label}${required ? "" : " (optional)"}`}
+      {...{ value, onChange, type, pattern }}
+      label={`${label} RHF`}
       // onBlur={field.onBlur} // notify when input is touched/blur
       disabled={isSubmitting}
       name={fieldName} 

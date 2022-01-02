@@ -19,9 +19,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import ColorSwatch from "./components/ColorSwatch";
 import CodeDialog from "./components/CodeDialog";
+import { useFormContext } from "react-hook-form";
 
 const App = () => {
   const { values } = useFormikContext<any>();
+  const { getValues } = useFormContext();
+  const foo = getValues();
   return (
     <Box overflow="hidden" height="100vh">
       <Grid container spacing={2}>
@@ -115,38 +118,38 @@ const App = () => {
                 {/* TODO - make these color swatch code blocks dynamic */}
                 primary
                 <Stack direction="row">
-                  <ColorSwatch color={values.palette.primary.light} />
-                  <ColorSwatch color={values.palette.primary.main} />
-                  <ColorSwatch color={values.palette.primary.dark} />
-                  <ColorSwatch color={values.palette.primary.contrastText} />
+                  <ColorSwatch color={foo.palette.primary.light} />
+                  <ColorSwatch color={foo.palette.primary.main} />
+                  <ColorSwatch color={foo.palette.primary.dark} />
+                  <ColorSwatch color={foo.palette.primary.contrastText} />
                 </Stack>
                 secondary
                 <Stack direction="row">
-                  <ColorSwatch color={values.palette.secondary.light} />
-                  <ColorSwatch color={values.palette.secondary.main} />
-                  <ColorSwatch color={values.palette.secondary.dark} />
-                  <ColorSwatch color={values.palette.secondary.contrastText} />
+                  <ColorSwatch color={foo.palette.secondary.light} />
+                  <ColorSwatch color={foo.palette.secondary.main} />
+                  <ColorSwatch color={foo.palette.secondary.dark} />
+                  <ColorSwatch color={foo.palette.secondary.contrastText} />
                 </Stack>
                 error
                 <Stack direction="row">
-                  <ColorSwatch color={values.palette.error.light} />
-                  <ColorSwatch color={values.palette.error.main} />
-                  <ColorSwatch color={values.palette.error.dark} />
-                  <ColorSwatch color={values.palette.error.contrastText} />
+                  <ColorSwatch color={foo.palette.error.light} />
+                  <ColorSwatch color={foo.palette.error.main} />
+                  <ColorSwatch color={foo.palette.error.dark} />
+                  <ColorSwatch color={foo.palette.error.contrastText} />
                 </Stack>
                 warning
                 <Stack direction="row">
-                  <ColorSwatch color={values.palette.warning.light} />
-                  <ColorSwatch color={values.palette.warning.main} />
-                  <ColorSwatch color={values.palette.warning.dark} />
-                  <ColorSwatch color={values.palette.warning.contrastText} />
+                  <ColorSwatch color={foo.palette.warning.light} />
+                  <ColorSwatch color={foo.palette.warning.main} />
+                  <ColorSwatch color={foo.palette.warning.dark} />
+                  <ColorSwatch color={foo.palette.warning.contrastText} />
                 </Stack>
                 success
                 <Stack direction="row">
-                  <ColorSwatch color={values.palette.success.light} />
-                  <ColorSwatch color={values.palette.success.main} />
-                  <ColorSwatch color={values.palette.success.dark} />
-                  <ColorSwatch color={values.palette.success.contrastText} />
+                  <ColorSwatch color={foo.palette.success.light} />
+                  <ColorSwatch color={foo.palette.success.main} />
+                  <ColorSwatch color={foo.palette.success.dark} />
+                  <ColorSwatch color={foo.palette.success.contrastText} />
                 </Stack>
               </>
             </ThemeProvider>

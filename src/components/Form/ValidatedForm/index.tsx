@@ -3,8 +3,8 @@ import { useForm, FormProvider } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { LoadingButton } from "@mui/lab";
 
-const ValidatedForm = ({ children }: any) => {
-  const methods = useForm();
+const ValidatedForm = ({ children, defaultValues }: any) => {
+  const methods = useForm({ defaultValues });
   const {
     handleSubmit,
     reset,

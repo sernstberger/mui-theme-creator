@@ -1,6 +1,7 @@
 import { lighten, darken, getContrastRatio } from "@mui/material";
 
 const createPaletteColor = (color: string) => {
+  console.log("color", color);
   const contrastRatio = getContrastRatio("#FFF", color);
   const contrastText = contrastRatio >= 3 ? "#FFF" : "#000";
   return {

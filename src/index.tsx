@@ -166,7 +166,7 @@ ReactDOM.render(
     }}
   >
     <Form>
-      <ValidatedForm>
+      <ValidatedForm defaultValues={initialValues}>
         <App />
       </ValidatedForm>
     </Form>

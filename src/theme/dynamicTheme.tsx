@@ -2,9 +2,13 @@ import { createTheme } from "@mui/material/styles";
 import { alpha, lighten, darken, getContrastRatio } from "@mui/material";
 import { useFormikContext } from "formik";
 import { createPaletteColor } from "../utils";
+import { useForm, useFormContext } from "react-hook-form";
 
 const theme = () => {
   const { values } = useFormikContext<any>();
+  const { getValues } = useFormContext();
+  const foo = getValues();
+  console.log("!!!hit", foo);
 
   const fontObject = (fontName: string) => {
     return {
@@ -34,14 +38,14 @@ const theme = () => {
         xl: values.breakpoints.xl,
       },
     },
-    spacing: values.spacing,
+    spacing: foo.spacing,
     direction: values.direction,
     palette: {
-      primary: createPaletteColor(values.palette.primary.main),
-      secondary: createPaletteColor(values.palette.secondary.main),
-      error: createPaletteColor(values.palette.error.main),
-      warning: createPaletteColor(values.palette.warning.main),
-      success: createPaletteColor(values.palette.success.main),
+      primary: createPaletteColor(foo.palette.primary.main),
+      secondary: createPaletteColor(foo.palette.secondary.main),
+      error: createPaletteColor(foo.palette.error.main),
+      warning: createPaletteColor(foo.palette.warning.main),
+      success: createPaletteColor(foo.palette.success.main),
 
       text: {
         primary: values.textPrimaryColor,

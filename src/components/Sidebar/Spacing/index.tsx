@@ -1,10 +1,11 @@
 import TextInput from "../../Form/TextInput";
+import ValidatedNumberInput from "../../Form/ValidatedNumberInput";
 import Layout from "../SidebarItem";
 
 const Spacing = () => {
   return (
     <Layout title="Spacing">
-      <TextInput field="spacing" type="number" label="Spacing" />
+      <ValidatedNumberInput fieldName="spacing" label="Spacing" />
     </Layout>
   );
 };
