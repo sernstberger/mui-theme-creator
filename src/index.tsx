@@ -3,6 +3,7 @@ import App from "./App";
 import { Formik, Form, FormikHelpers } from "formik";
 import { createPaletteColor } from "./utils";
 import { ThemeOptions } from "@mui/material";
+import ValidatedForm from "./components/Form/ValidatedForm";
 
 const initialValues: ThemeOptions = {
   breakpoints: {
@@ -165,7 +166,9 @@ ReactDOM.render(
     }}
   >
     <Form>
-      <App />
+      <ValidatedForm>
+        <App />
+      </ValidatedForm>
     </Form>
   </Formik>,
 

@@ -5,7 +5,10 @@
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@hookform/devtools": "^4.0.1",
+    "@hookform/resolvers": "^2.8.5",
     "@mui/icons-material": "^5.2.1",
+    "@mui/lab": "^5.0.0-alpha.62",
     "@mui/material": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -13,9 +16,12 @@
     "formik": "^2.2.9",
     "react": "latest",
     "react-dom": "latest",
+    "react-hook-form": "^7.22.5",
+    "react-number-format": "^4.9.0",
     "react-scripts": "latest",
     "react-syntax-highlighter": "^15.4.5",
-    "typescript": "latest"
+    "typescript": "latest",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
