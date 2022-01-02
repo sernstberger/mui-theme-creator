@@ -66,10 +66,7 @@ const App = () => {
                 <MuiTypography variant="overline">
                   Content goes here
                 </MuiTypography>
-                
                 {/* <MuiButton variant={values.button.variant}>Woot</MuiButton> */}
-
-
                 {/* <Stack spacing={2} direction="row">
                   <MuiButton variant="contained">Button CTA</MuiButton>
                   <MuiButton variant="contained" className="Mui-hover">
@@ -104,8 +101,6 @@ const App = () => {
                     Button CTA
                   </MuiButton>
                 </Stack> */}
-
-
                 <br />
                 <Divider />
                 <br />
@@ -118,38 +113,38 @@ const App = () => {
                 {/* TODO - make these color swatch code blocks dynamic */}
                 primary
                 <Stack direction="row">
-                  <ColorSwatch color={foo.palette.primary.light} />
-                  <ColorSwatch color={foo.palette.primary.main} />
-                  <ColorSwatch color={foo.palette.primary.dark} />
-                  <ColorSwatch color={foo.palette.primary.contrastText} />
+                  <ColorSwatch fieldName="palette.primary.light" />
+                  <ColorSwatch fieldName="palette.primary.main" />
+                  <ColorSwatch fieldName="palette.primary.dark" />
+                  <ColorSwatch fieldName="palette.primary.contrastText" />
                 </Stack>
                 secondary
                 <Stack direction="row">
-                  <ColorSwatch color={foo.palette.secondary.light} />
-                  <ColorSwatch color={foo.palette.secondary.main} />
-                  <ColorSwatch color={foo.palette.secondary.dark} />
-                  <ColorSwatch color={foo.palette.secondary.contrastText} />
+                  <ColorSwatch fieldName="palette.secondary.light" />
+                  <ColorSwatch fieldName="palette.secondary.main" />
+                  <ColorSwatch fieldName="palette.secondary.dark" />
+                  <ColorSwatch fieldName="palette.secondary.contrastText" />
                 </Stack>
                 error
                 <Stack direction="row">
-                  <ColorSwatch color={foo.palette.error.light} />
-                  <ColorSwatch color={foo.palette.error.main} />
-                  <ColorSwatch color={foo.palette.error.dark} />
-                  <ColorSwatch color={foo.palette.error.contrastText} />
+                  <ColorSwatch fieldName="palette.error.light" />
+                  <ColorSwatch fieldName="palette.error.main" />
+                  <ColorSwatch fieldName="palette.error.dark" />
+                  <ColorSwatch fieldName="palette.error.contrastText" />
                 </Stack>
                 warning
                 <Stack direction="row">
-                  <ColorSwatch color={foo.palette.warning.light} />
-                  <ColorSwatch color={foo.palette.warning.main} />
-                  <ColorSwatch color={foo.palette.warning.dark} />
-                  <ColorSwatch color={foo.palette.warning.contrastText} />
+                  <ColorSwatch fieldName="palette.warning.light" />
+                  <ColorSwatch fieldName="palette.warning.main" />
+                  <ColorSwatch fieldName="palette.warning.dark" />
+                  <ColorSwatch fieldName="palette.warning.contrastText" />
                 </Stack>
                 success
                 <Stack direction="row">
-                  <ColorSwatch color={foo.palette.success.light} />
-                  <ColorSwatch color={foo.palette.success.main} />
-                  <ColorSwatch color={foo.palette.success.dark} />
-                  <ColorSwatch color={foo.palette.success.contrastText} />
+                  <ColorSwatch fieldName="palette.success.light" />
+                  <ColorSwatch fieldName="palette.success.main" />
+                  <ColorSwatch fieldName="palette.success.dark" />
+                  <ColorSwatch fieldName="palette.success.contrastText" />
                 </Stack>
               </>
             </ThemeProvider>

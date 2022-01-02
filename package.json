@@ -14,6 +14,7 @@
     "@types/react-dom": "latest",
     "@types/react-syntax-highlighter": "^13.5.2",
     "formik": "^2.2.9",
+    "lodash": "^4.17.21",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.22.5",
