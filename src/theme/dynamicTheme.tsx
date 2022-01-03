@@ -5,10 +5,9 @@ import { createPaletteColor } from "../utils";
 import { useForm, useFormContext } from "react-hook-form";
 
 const theme = () => {
-  const { values } = useFormikContext<any>();
   const { getValues } = useFormContext();
-  const foo = getValues();
-  console.log("!!!hit", foo);
+  const values = getValues();
+  console.log("!!!hit", values);
 
   const fontObject = (fontName: string) => {
     return {
@@ -38,14 +37,14 @@ const theme = () => {
         xl: values.breakpoints.xl,
       },
     },
-    spacing: foo.spacing,
+    spacing: values.spacing,
     direction: values.direction,
     palette: {
-      primary: createPaletteColor(foo.palette.primary.main),
-      secondary: createPaletteColor(foo.palette.secondary.main),
-      error: createPaletteColor(foo.palette.error.main),
-      warning: createPaletteColor(foo.palette.warning.main),
-      success: createPaletteColor(foo.palette.success.main),
+      primary: createPaletteColor(values.palette.primary.main),
+      secondary: createPaletteColor(values.palette.secondary.main),
+      error: createPaletteColor(values.palette.error.main),
+      warning: createPaletteColor(values.palette.warning.main),
+      success: createPaletteColor(values.palette.success.main),
 
       text: {
         primary: values.textPrimaryColor,

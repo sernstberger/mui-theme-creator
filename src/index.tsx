@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom";
 import App from "./App";
-import { Formik, Form, FormikHelpers } from "formik";
 import { createPaletteColor } from "./utils";
 import { ThemeOptions } from "@mui/material";
 import ValidatedForm from "./components/Form/ValidatedForm";
@@ -155,22 +154,9 @@ const initialValues: ThemeOptions = {
 };
 
 ReactDOM.render(
-  <Formik
-    // enableReinitialize
-    initialValues={initialValues}
-    onSubmit={(values: ThemeOptions, { setSubmitting }: FormikHelpers<any>) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-        setSubmitting(false);
-      }, 500);
-    }}
-  >
-    <Form>
-      <ValidatedForm defaultValues={initialValues}>
-        <App />
-      </ValidatedForm>
-    </Form>
-  </Formik>,
+  <ValidatedForm defaultValues={initialValues}>
+    <App />
+  </ValidatedForm>,
 
   document.querySelector("#root")
 );

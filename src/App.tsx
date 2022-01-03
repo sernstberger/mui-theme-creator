@@ -14,7 +14,6 @@ import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import theme from "./theme";
 import dynamicTheme from "./theme/dynamicTheme";
 import Sidebar from "./components/Sidebar";
-import { useFormikContext } from "formik";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import ColorSwatch from "./components/ColorSwatch";
@@ -22,7 +21,6 @@ import CodeDialog from "./components/CodeDialog";
 import { useFormContext } from "react-hook-form";
 
 const App = () => {
-  const { values } = useFormikContext<any>();
   const { getValues } = useFormContext();
   const foo = getValues();
   return (
@@ -31,7 +29,8 @@ const App = () => {
         <Grid item xs={3}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Sidebar />
+            {/* <Sidebar /> */}
+            cool
           </ThemeProvider>
         </Grid>
         <Grid item xs={9}>
@@ -43,7 +42,7 @@ const App = () => {
             <ThemeProvider theme={dynamicTheme()}>
               <CssBaseline />
               <>
-                <MuiTypography variant="h1">Content goes here</MuiTypography>
+                {/* <MuiTypography variant="h1">Content goes here</MuiTypography>
                 <MuiTypography variant="h2">Content goes here</MuiTypography>
                 <MuiTypography variant="h3">Content goes here</MuiTypography>
                 <MuiTypography variant="h4">Content goes here</MuiTypography>
@@ -65,7 +64,7 @@ const App = () => {
                 </MuiTypography>
                 <MuiTypography variant="overline">
                   Content goes here
-                </MuiTypography>
+                </MuiTypography> */}
                 {/* <MuiButton variant={values.button.variant}>Woot</MuiButton> */}
                 {/* <Stack spacing={2} direction="row">
                   <MuiButton variant="contained">Button CTA</MuiButton>
@@ -102,16 +101,16 @@ const App = () => {
                   </MuiButton>
                 </Stack> */}
                 <br />
-                <Divider />
+                {/* <Divider />
                 <br />
                 <div>
                   <TextField label="Foooooo" />
                 </div>
                 <br />
                 <Divider />
-                <br />
+                <br /> */}
                 {/* TODO - make these color swatch code blocks dynamic */}
-                primary
+                {/* primary
                 <Stack direction="row">
                   <ColorSwatch fieldName="palette.primary.light" />
                   <ColorSwatch fieldName="palette.primary.main" />
@@ -145,7 +144,8 @@ const App = () => {
                   <ColorSwatch fieldName="palette.success.main" />
                   <ColorSwatch fieldName="palette.success.dark" />
                   <ColorSwatch fieldName="palette.success.contrastText" />
-                </Stack>
+                </Stack> */}
+                beans
               </>
             </ThemeProvider>
           </Box>
