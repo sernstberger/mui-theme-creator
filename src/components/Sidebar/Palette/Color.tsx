@@ -18,7 +18,11 @@ const Color = ({ field, label }: any) => {
   return (
     <Stack direction="row" spacing={2}>
       <ColorSwatch fieldName={`palette.${field}.main`} />
-      <ValidatedTextInput fieldName={`palette.${field}.main`} {...{ label }} />
+      <ValidatedTextInput
+        fieldName={`palette.${field}.main`}
+        {...{ label }}
+        onChange={() => console.log("!!!coolio")}
+      />
     </Stack>
   );
 };

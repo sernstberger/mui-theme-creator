@@ -16,6 +16,7 @@
     "formik": "^2.2.9",
     "lodash": "^4.17.21",
     "react": "latest",
+    "react-color": "^2.19.3",
     "react-dom": "latest",
     "react-hook-form": "^7.22.5",
     "react-number-format": "^4.9.0",
@@ -50,7 +51,8 @@
     "@storybook/addon-links": "^6.4.9",
     "@storybook/node-logger": "^6.4.9",
     "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.4.9"
+    "@storybook/react": "^6.4.9",
+    "@types/react-color": "^3.0.6"
   },
   "eslintConfig": {
     "overrides": [

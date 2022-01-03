@@ -31,7 +31,7 @@ export interface ValidatedInputBaseProps
   fieldName: string;
   customValidation?: any; // TODO - this needs to be a yup schema
   rules?: RulesProps;
-  pattern?: any
+  pattern?: any;
 }
 
 const ValidatedInputBase = ({
@@ -84,6 +84,7 @@ const ValidatedInputBase = ({
     defaultValue,
   });
 
+  console.log("!!!", "changed");
   return (
     <TextField
       {...rest}
@@ -91,7 +92,7 @@ const ValidatedInputBase = ({
       label={`${label} RHF`}
       // onBlur={field.onBlur} // notify when input is touched/blur
       disabled={isSubmitting}
-      name={fieldName} 
+      name={fieldName}
       id={fieldName}
       inputRef={ref} // send input ref, so we can focus on input when error appear
       error={invalid}
