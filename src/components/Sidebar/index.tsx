@@ -78,16 +78,16 @@ const Sidebar = () => {
   return (
     <ThemeProvider theme={theme}>
       <Box height="100vh" overflow="scroll">
-        <Breakpoints />
-        <Direction />
+        {/* <Breakpoints /> */}
+        {/* <Direction /> */}
 
-        {components.map((component) => {
+        {/* {components.map((component) => {
           return <Component key={component} name={component} />;
-        })}
+        })} */}
 
         <Palette />
-        <Spacing />
-        <Shape />
+        {/* <Spacing /> */}
+        {/* <Shape /> */}
         {/* mixins */}
         {/* shadows */}
         {/* <Typography /> */}
